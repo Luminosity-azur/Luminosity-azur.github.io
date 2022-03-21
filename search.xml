@@ -1,10 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>典型的环节与系统方框图</title>
+    <url>/2022/03/21/control_typical_block/</url>
+    <content><![CDATA[<h1 id="典型的环节与系统方框图"><a href="#典型的环节与系统方框图" class="headerlink" title="典型的环节与系统方框图"></a>典型的环节与系统方框图</h1><h2 id="1-典型环节"><a href="#1-典型环节" class="headerlink" title="1 典型环节"></a>1 典型环节</h2><p>所谓环节就是具有相同形式传递函数的原部件的分类。这些传递函数是控制系统最经典最典型的。</p>
+<h3 id="1-1-比例环节"><a href="#1-1-比例环节" class="headerlink" title="1.1 比例环节"></a>1.1 比例环节</h3><p>传递函数<br>$$<br>G(s) &#x3D; K<br>$$</p>
+<p>这个系统就是将输入乘以一个常数K输出，所以叫做比例环节。典型的比例环节部件就是电位计，根据电阻指针的位置有对应比例的输出。</p>
+<h3 id="1-2-微分环节"><a href="#1-2-微分环节" class="headerlink" title="1.2 微分环节"></a>1.2 微分环节</h3><p>传递函数<br>$$<br>G(s) &#x3D; s<br>$$</p>
+<p>不难发现，这就是Laplace变换微分定理，将输入乘以s，就是在时域微分。</p>
+<h3 id="1-3-积分环节"><a href="#1-3-积分环节" class="headerlink" title="1.3 积分环节"></a>1.3 积分环节</h3><p>传递函数<br>$$<br>G(s) &#x3D; \frac{1}{s}<br>$$</p>
+<p>这也是Laplace变换的积分定理，将输入除以s，就是在时域积分。</p>
+<h3 id="1-4-惯性环节"><a href="#1-4-惯性环节" class="headerlink" title="1.4 惯性环节"></a>1.4 惯性环节</h3><p>传递函数<br>$$<br>G(s) &#x3D; \frac{1}{Ts+1}<br>$$</p>
+<p>这个函数其实描述了一个缓慢消失的过程，我们把它的时域函数写出来。<br>$$<br>h(t) &#x3D; \frac{1}{T}e^{-\frac{t}{T}}<br>$$</p>
+<p>随着时间增加，函数值按指数减少，就像是因为惯性而保持一段距离，最后消失，其中$T$就是<strong>时间常数</strong>，它决定了系统衰减的速度。</p>
+<h3 id="1-5-震荡环节"><a href="#1-5-震荡环节" class="headerlink" title="1.5 震荡环节"></a>1.5 震荡环节</h3><p>传递函数<br>$$<br>G(s) &#x3D; \frac{1}{T^2s^2+2\xi Ts+1}<br>$$</p>
+<p>函数描述的是一种震荡的状态，将在后面的二阶系统响应分析中详细介绍。</p>
+<h3 id="1-6-一阶复合微分环节"><a href="#1-6-一阶复合微分环节" class="headerlink" title="1.6 一阶复合微分环节"></a>1.6 一阶复合微分环节</h3><p>传递函数<br>$$<br>\tau s+1<br>$$</p>
+<p>暂不做介绍</p>
+<h3 id="1-7-二阶复合微分环节"><a href="#1-7-二阶复合微分环节" class="headerlink" title="1.7 二阶复合微分环节"></a>1.7 二阶复合微分环节</h3><p>传递函数<br>$$<br>\tau^2s^2+2\xi \tau s+1<br>$$</p>
+<p>暂不做介绍。</p>
+<h3 id="1-8总结"><a href="#1-8总结" class="headerlink" title="1.8总结"></a>1.8总结</h3><p>任何的传递函数都可以看作典型环节的组合，这些典型环节可以构成多种多样的系统。</p>
+<h2 id="2-负载效应问题"><a href="#2-负载效应问题" class="headerlink" title="2 负载效应问题"></a>2 负载效应问题</h2><p>现考虑两个电路连接在一起，第一级电路输入$u_r$，输出$u_a$，第二级电路输入$u_a$，输出$u_c$。但我们都知道，简单的耦合两个电路，第二级电路实际上会对第一级电路造成影响，这就叫做负载效应。对系统接入负载的时候，可能会导致系统不是简单的输入输出关系。</p>
+<h2 id="3-系统方框图"><a href="#3-系统方框图" class="headerlink" title="3 系统方框图"></a>3 系统方框图</h2><p>描述控制系统的一大方式就是使用方框图，用有向线段表示信号的流通方向，方框表示系统模块，圆形表示加法器。方框图指明了信号的流动以及各部分对于信号的处理。</p>
+<p>有了系统的方框图，下一步就是求解整个系统的传递函数。</p>
+<h2 id="4-传递函数求解"><a href="#4-传递函数求解" class="headerlink" title="4 传递函数求解"></a>4 传递函数求解</h2><h3 id="4-1-消解系数法"><a href="#4-1-消解系数法" class="headerlink" title="4.1 消解系数法"></a>4.1 消解系数法</h3><p>把方框图所有的信号写出来，根据信号的处理把模块输入和输出的关系写出来，然后把中间变量全部消除，的到最终输出与输入的关系。这种方法最简单，但在系统变得很复杂的时候不简便。</p>
+<h3 id="4-2-结构图等效变换法"><a href="#4-2-结构图等效变换法" class="headerlink" title="4.2 结构图等效变换法"></a>4.2 结构图等效变换法</h3><p>结构图有很多等效变换的法则，灵活使用它们可以将系统的传递函数找出来，这个过程也叫做化简。</p>
+<h4 id="4-2-1-反馈等效"><a href="#4-2-1-反馈等效" class="headerlink" title="4.2.1 反馈等效"></a>4.2.1 反馈等效</h4><p>系统前向模块是$G(s)$，反馈模块是$H(s)$，系统等效为</p>
+<p>$$<br>\frac{G(s)}{1+G(s)H(s)}<br>$$</p>
+<div align=center> 
+<img src="https://pic.imgdb.cn/item/62209e4f5baa1a80abc346de.jpg"></img>
+<div align=left>
+
+
+<h4 id="4-2-2-串联等效"><a href="#4-2-2-串联等效" class="headerlink" title="4.2.2 串联等效"></a>4.2.2 串联等效</h4><p>系统$G_1(s)$与$G_2(s)$串联，等效为<br>$$<br>G_1(s)\cdot G_2(s)<br>$$</p>
+<div align=center> 
+<img src="https://pic.imgdb.cn/item/62209dfd5baa1a80abc3158d.jpg"></img>
+<div align=left>
+
+<h4 id="4-2-3-并联等效"><a href="#4-2-3-并联等效" class="headerlink" title="4.2.3 并联等效"></a>4.2.3 并联等效</h4><p>系统$G_1(s)$与$G_2(s)$并联，等效为<br>$$<br>G_1(s)+G_2(s)<br>$$</p>
+<h4 id="4-3-4-比较点前移"><a href="#4-3-4-比较点前移" class="headerlink" title="4.3.4 比较点前移"></a>4.3.4 比较点前移</h4><blockquote>
+<p>加法器也叫比较器，因为它将两个输入的信号进行相减(信号1加上负的信号2)</p>
+</blockquote>
+<p>比较点在$G(s)$后面，相当于没有经过$G(s)$，前移过后信号就经过$G(s)$了，这时候需要乘以逆系统$\frac{1}{G(s)}$。</p>
+<div align=center> 
+<img src="https://pic.imgdb.cn/item/62209e425baa1a80abc33dc6.jpg"></img>
+<div align=left>
+
+<h4 id="4-3-5-比较点后移"><a href="#4-3-5-比较点后移" class="headerlink" title="4.3.5 比较点后移"></a>4.3.5 比较点后移</h4><p>反过来，比较点本来在$G(s)$前面，相当于经过了$G(s)$，后移之后就没有经过$G(s)$了，所以要补上一个$G(s)$。</p>
+<div align=center> 
+<img src="https://pic.imgdb.cn/item/62209e125baa1a80abc32422.jpg"></img>
+<div align=left>
+
+<h4 id="4-3-6-引出点前移"><a href="#4-3-6-引出点前移" class="headerlink" title="4.3.6 引出点前移"></a>4.3.6 引出点前移</h4><p>引出点在系统后面，则原信号是经过了系统的，移到前面之后就相当于没有经过系统就引出了，则需要补上一个$G(s)$</p>
+<div align=center> 
+<img src="https://pic.imgdb.cn/item/62209e245baa1a80abc32da1.jpg"></img>
+<div align=left>
+
+<h4 id="4-3-7-引出点后移"><a href="#4-3-7-引出点后移" class="headerlink" title="4.3.7 引出点后移"></a>4.3.7 引出点后移</h4><p>引出点在系统前面，则原信号没有经过系统，移到后面之后就相当于经过了系统才引出，所以需要乘以一个逆系统$\frac{1}{G(s)}$</p>
+<div align=center> 
+<img src="https://pic.imgdb.cn/item/62209e375baa1a80abc338b6.jpg"></img>
+<div align=left>]]></content>
+      <categories>
+        <category>通信工程本科</category>
+        <category>大三下</category>
+        <category>自动控制原理</category>
+      </categories>
+      <tags>
+        <tag>控制系统</tag>
+        <tag>自动控制原理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2022/03/18/hello-world/</url>
-    <content><![CDATA[<p>Genshin impact is the best game around the world!!!</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
@@ -19,21 +88,60 @@
 ]]></content>
   </entry>
   <entry>
+    <title>感知机(Perceptron)</title>
+    <url>/2022/03/21/perceptron/</url>
+    <content><![CDATA[<h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1 简介"></a>1 简介</h1><p>感知机是一种简单的，用于二分类的模型。它的构建思想，就是使用一个超平面将数据分为正负两类，输出$+1$或者$-1$。感知机可以使用梯度下降的方法进行最优化，但是其优化算法只在数据线性可分的时候收敛。感知机是Rosenblatt在1957年提出的。</p>
+<h1 id="2-模型的构建"><a href="#2-模型的构建" class="headerlink" title="2 模型的构建"></a>2 模型的构建</h1><p>由上述构建思想可知，感知机要将一个特征空间为$X \subseteq R^n$的数据映射到输出空间$Y&#x3D;{+1,-1}$。使用$x\in X$表示训练数据的特征向量，$y\in Y$表示输出的值。之前提到过，感知机使用超平面来区分正类和负类，那么就可以先把超平面的方程写出来。<br>$$<br>w\cdot x +b&#x3D;0<br>$$</p>
+<span id="more"></span>
+
+<p>其中$w$称为权重向量。因为$w$和$x$点乘，实际上是和输入数据的特征进行加权求和。然后，我们需要把超平面计算的结果映射到0和1，感知机选择的是$sgn$函数。所以，感知机模型的数学表达式为<br>$$<br>f(x) &#x3D; sgn(w\cdot x+b)<br>$$</p>
+<p>它的参数是权重向量$w$和常量$b$。对应到超平面上，$w$就是超平面的法向量，$b$是超平面的截距。</p>
+<h1 id="3-感知机的学习策略"><a href="#3-感知机的学习策略" class="headerlink" title="3 感知机的学习策略"></a>3 感知机的学习策略</h1><p>为了对感知机进行参数最优化，我们需要找到它的损失函数。很容易想到损失函数可以用分类错误的点数来衡量，但是错误的个数是离散的，这个函数不可微分，所以用不了梯度下降。所以考虑错误分类点到超平面S的总距离，一个点到超平面的计算方法是<br>$$<br>\frac{1}{||w||}|w\cdot x_0+b|<br>$$<br>其中$||w||$ 是$w$的$L_2$范数。</p>
+<p>如果分析感知机错误分类的时候的两种情况，也就是正样本负判，负样本正判。对于第一种，$w\cdot x_i+b &gt;0$的时候，感知机本应该输出1，但错误分类时输出-1，所以$-(w\cdot x_i+b)y_i&gt;0$，对于第二种，$w\cdot x_i+b &lt;0$的时候，感知机本应该输出-1，但错误分类时输出$1$，所以$-(w\cdot x_i+b)y_i&gt;0$，所以，如果感知机错误分类一个数据，总有<br>$$<br>-y_i(w\cdot x_i+b)&gt;0<br>$$</p>
+<p>因此，拿掉距离计算公式里面的绝对值，可以得到新的距离计算公式<br>$$<br>-\frac{1}{||w||}y_i(w\cdot x_i+b)<br>$$<br>于是，我们对所有点到超平面的距离求和，得到总距离的计算公式<br>$$<br>-\frac{1}{||w||}\sum_{x_i\in M}y_i(w\cdot x_i+b)<br>$$</p>
+<p>现在不考虑权重的$L_2$范数，那么感知机的损失函数就是<br>$$<br>L(w,b) &#x3D; -\sum_{x_i\in M}y_i(w\cdot x_i+b)<br>$$</p>
+<p>这个函数意味着，如果错误分类的越少，错误分类的点离超平面越近，那么损失函数就越小。</p>
+<h1 id="4-最优化"><a href="#4-最优化" class="headerlink" title="4 最优化"></a>4 最优化</h1><p>感知机的最优化问题就是求解损失函数最小时的参数$w$和$b$。<br>$$<br>\min_{w,b}L(w,b) &#x3D; -\sum_{x_i\in M}y_i(w\cdot x_i+b)<br>$$</p>
+<p>那么，采用随机梯度下降法进行优化。首先随机一个$w_0$和$b_0$，接下来求梯度。</p>
+<p>对于法向量$w$。<br>$$<br>\nabla_w L(w,b) &#x3D; -\sum_{x_i\in M}y_ix_i<br>$$</p>
+<p>对于截距$b$<br>$$<br>\nabla_b L(w,b) &#x3D; -\sum_{x_i\in M}y_i<br>$$</p>
+<p>于是，如果随机选取一个错误分类的数据，更新的方法就是<br>$$<br>\begin{cases}<br>w^* &#x3D; w-(-\eta y_ix_i)&#x3D;w+\eta y_ix_i \<br>b^* &#x3D; b-(-\eta y_i) &#x3D; b+\eta y_i<br>\end{cases}<br>$$</p>
+<p>其中$\eta$就是学习率。</p>
+<p>所以，适用于编程实现的算法应该是</p>
+<ol>
+<li>随机一个$w_0$, $b_0$</li>
+<li>在训练集中选取一个数据$(x_i, y_i)$</li>
+<li>如果$y_i(w\cdot x_i+b)\leq 0$</li>
+<li>使用更新方法更新参数</li>
+<li>循环到第二部，直到感知机不会产生错误分类的数据。</li>
+</ol>
+<p>至此，感知机的构建，学习策略和最优化算法阐述完毕。</p>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+        <category>传统算法</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+        <tag>统计学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>测试1</title>
     <url>/2022/03/20/%E6%B5%8B%E8%AF%951/</url>
-    <content><![CDATA[<p>只是一个测试</p>
+    <content><![CDATA[<p>一个测试。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>测试2</title>
+    <url>/2022/03/20/%E6%B5%8B%E8%AF%952/</url>
+    <content><![CDATA[<p>Just a test.</p>
 ]]></content>
   </entry>
   <entry>
     <title>第一篇文字</title>
     <url>/2022/03/18/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E5%AD%97/</url>
     <content><![CDATA[<p>以我观物，故物皆着我之色。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>测试</title>
-    <url>/2022/03/20/%E6%B5%8B%E8%AF%952/</url>
-    <content><![CDATA[<p>Just a test.</p>
 ]]></content>
   </entry>
 </search>

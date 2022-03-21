@@ -5,15 +5,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Hello World - Luminosity Blog</title>
+    <title>感知机(Perceptron) - Luminosity Blog</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Luminosity,"> 
-    <meta name="description" content="Quick StartCreate a new post1$ hexo new &amp;quot;My New Post&amp;quot;
-
-More info: Writing
-Run server1$ he,"> 
+    <meta name="description" content="1 简介感知机是一种简单的，用于二分类的模型。它的构建思想，就是使用一个超平面将数据分为正负两类，输出$+1$或者$-1$。感知机可以使用梯度下降的方法进行最优化，但是其优化算法只在数据线性可分的时,"> 
     <meta name="author" content="Luke"> 
     <link rel="alternative" href="atom.xml" title="Luminosity Blog" type="application/atom+xml"> 
     <link rel="icon" href="/img/ico.jpg"> 
@@ -21,22 +18,16 @@ Run server1$ he,">
     
     
     <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:title" content="Hello World - Luminosity Blog"/>
-    <meta name="twitter:description" content="Quick StartCreate a new post1$ hexo new &amp;quot;My New Post&amp;quot;
-
-More info: Writing
-Run server1$ he,"/>
+    <meta name="twitter:title" content="感知机(Perceptron) - Luminosity Blog"/>
+    <meta name="twitter:description" content="1 简介感知机是一种简单的，用于二分类的模型。它的构建思想，就是使用一个超平面将数据分为正负两类，输出$+1$或者$-1$。感知机可以使用梯度下降的方法进行最优化，但是其优化算法只在数据线性可分的时,"/>
     
     
     
     
     <meta property="og:site_name" content="Luminosity Blog"/>
     <meta property="og:type" content="object"/>
-    <meta property="og:title" content="Hello World - Luminosity Blog"/>
-    <meta property="og:description" content="Quick StartCreate a new post1$ hexo new &amp;quot;My New Post&amp;quot;
-
-More info: Writing
-Run server1$ he,"/>
+    <meta property="og:title" content="感知机(Perceptron) - Luminosity Blog"/>
+    <meta property="og:description" content="1 简介感知机是一种简单的，用于二分类的模型。它的构建思想，就是使用一个超平面将数据分为正负两类，输出$+1$或者$-1$。感知机可以使用梯度下降的方法进行最优化，但是其优化算法只在数据线性可分的时,"/>
     
 <link rel="stylesheet" href="/css/diaspora.css">
 
@@ -50,7 +41,7 @@ Run server1$ he,"/>
     <div class="bar" style="width: 0;"></div>
     <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://liyitao.cn"></a>
     <div title="播放/暂停" class="iconfont icon-play"></div>
-    <h3 class="subtitle">Hello World</h3>
+    <h3 class="subtitle">感知机(Perceptron)</h3>
     <div class="social">
         <div>
             <div class="share">
@@ -65,25 +56,41 @@ Run server1$ he,"/>
     <div class="section">
         <div class="article">
     <div class='main'>
-        <h1 class="title">Hello World</h1>
+        <h1 class="title">感知机(Perceptron)</h1>
         <div class="stuff">
-            <span>三月 18, 2022</span>
+            <span>三月 21, 2022</span>
             
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag">机器学习</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0/" rel="tag">统计学习</a></li></ul>
+
 
         </div>
         <div class="content markdown">
-            <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+            <h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1 简介"></a>1 简介</h1><p>感知机是一种简单的，用于二分类的模型。它的构建思想，就是使用一个超平面将数据分为正负两类，输出$+1$或者$-1$。感知机可以使用梯度下降的方法进行最优化，但是其优化算法只在数据线性可分的时候收敛。感知机是Rosenblatt在1957年提出的。</p>
+<h1 id="2-模型的构建"><a href="#2-模型的构建" class="headerlink" title="2 模型的构建"></a>2 模型的构建</h1><p>由上述构建思想可知，感知机要将一个特征空间为$X \subseteq R^n$的数据映射到输出空间$Y&#x3D;{+1,-1}$。使用$x\in X$表示训练数据的特征向量，$y\in Y$表示输出的值。之前提到过，感知机使用超平面来区分正类和负类，那么就可以先把超平面的方程写出来。<br>$$<br>w\cdot x +b&#x3D;0<br>$$</p>
+<span id="more"></span>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>其中$w$称为权重向量。因为$w$和$x$点乘，实际上是和输入数据的特征进行加权求和。然后，我们需要把超平面计算的结果映射到0和1，感知机选择的是$sgn$函数。所以，感知机模型的数学表达式为<br>$$<br>f(x) &#x3D; sgn(w\cdot x+b)<br>$$</p>
+<p>它的参数是权重向量$w$和常量$b$。对应到超平面上，$w$就是超平面的法向量，$b$是超平面的截距。</p>
+<h1 id="3-感知机的学习策略"><a href="#3-感知机的学习策略" class="headerlink" title="3 感知机的学习策略"></a>3 感知机的学习策略</h1><p>为了对感知机进行参数最优化，我们需要找到它的损失函数。很容易想到损失函数可以用分类错误的点数来衡量，但是错误的个数是离散的，这个函数不可微分，所以用不了梯度下降。所以考虑错误分类点到超平面S的总距离，一个点到超平面的计算方法是<br>$$<br>\frac{1}{||w||}|w\cdot x_0+b|<br>$$<br>其中$||w||$ 是$w$的$L_2$范数。</p>
+<p>如果分析感知机错误分类的时候的两种情况，也就是正样本负判，负样本正判。对于第一种，$w\cdot x_i+b &gt;0$的时候，感知机本应该输出1，但错误分类时输出-1，所以$-(w\cdot x_i+b)y_i&gt;0$，对于第二种，$w\cdot x_i+b &lt;0$的时候，感知机本应该输出-1，但错误分类时输出$1$，所以$-(w\cdot x_i+b)y_i&gt;0$，所以，如果感知机错误分类一个数据，总有<br>$$<br>-y_i(w\cdot x_i+b)&gt;0<br>$$</p>
+<p>因此，拿掉距离计算公式里面的绝对值，可以得到新的距离计算公式<br>$$<br>-\frac{1}{||w||}y_i(w\cdot x_i+b)<br>$$<br>于是，我们对所有点到超平面的距离求和，得到总距离的计算公式<br>$$<br>-\frac{1}{||w||}\sum_{x_i\in M}y_i(w\cdot x_i+b)<br>$$</p>
+<p>现在不考虑权重的$L_2$范数，那么感知机的损失函数就是<br>$$<br>L(w,b) &#x3D; -\sum_{x_i\in M}y_i(w\cdot x_i+b)<br>$$</p>
+<p>这个函数意味着，如果错误分类的越少，错误分类的点离超平面越近，那么损失函数就越小。</p>
+<h1 id="4-最优化"><a href="#4-最优化" class="headerlink" title="4 最优化"></a>4 最优化</h1><p>感知机的最优化问题就是求解损失函数最小时的参数$w$和$b$。<br>$$<br>\min_{w,b}L(w,b) &#x3D; -\sum_{x_i\in M}y_i(w\cdot x_i+b)<br>$$</p>
+<p>那么，采用随机梯度下降法进行优化。首先随机一个$w_0$和$b_0$，接下来求梯度。</p>
+<p>对于法向量$w$。<br>$$<br>\nabla_w L(w,b) &#x3D; -\sum_{x_i\in M}y_ix_i<br>$$</p>
+<p>对于截距$b$<br>$$<br>\nabla_b L(w,b) &#x3D; -\sum_{x_i\in M}y_i<br>$$</p>
+<p>于是，如果随机选取一个错误分类的数据，更新的方法就是<br>$$<br>\begin{cases}<br>w^* &#x3D; w-(-\eta y_ix_i)&#x3D;w+\eta y_ix_i \<br>b^* &#x3D; b-(-\eta y_i) &#x3D; b+\eta y_i<br>\end{cases}<br>$$</p>
+<p>其中$\eta$就是学习率。</p>
+<p>所以，适用于编程实现的算法应该是</p>
+<ol>
+<li>随机一个$w_0$, $b_0$</li>
+<li>在训练集中选取一个数据$(x_i, y_i)$</li>
+<li>如果$y_i(w\cdot x_i+b)\leq 0$</li>
+<li>使用更新方法更新参数</li>
+<li>循环到第二部，直到感知机不会产生错误分类的数据。</li>
+</ol>
+<p>至此，感知机的构建，学习策略和最优化算法阐述完毕。</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
