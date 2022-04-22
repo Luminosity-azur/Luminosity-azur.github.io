@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>似是故人来</title>
+    <url>/2022/04/23/%E4%BC%BC%E6%98%AF%E6%95%85%E4%BA%BA%E6%9D%A5/</url>
+    <content><![CDATA[<p>梦到置身荒原<br>冷灰的天从头顶上灌注下来<br>地底深处的声音像战鼓一样轰鸣<br>前方是拿着火炬的人<br>只有一道若隐若无的白影</p>
+<p>追着鬼火一样的影子跑去<br>突然间四面八方都是人<br>他们叫喊着涌过来，我躲闪不及<br>然后看到他们的身上涂满了花纹<br>画着蛇与虫还有硕大的眼睛<br>他们围成了一圈，<br>无数的苍白脸挤挤挨挨到眼前</p>
+<p>天像裂开，字符从纸上下堕到壳上<br>再堕到被赤脚踩踏的地上<br>碎裂之后是一条巨蛇斯斯地腾空<br>那些字符从熟悉变得陌生再变得破碎<br>无数种语言仿佛离我而去<br>被撕裂被吞没<br>剩下一抹若有似无的白影<br>上面是冥冥的火在闪</p>
+<p>某种<br>最原始最抽象<br>存在语言获得意义之前的恐惧<br>混杂着灰铅色的天与轰鸣的地，<br>一大团挤压的人脸和恐怖的图腾<br>侵入意识模糊的短暂休眠<br>醒来只听到窗外在下雨</p>
+]]></content>
+      <categories>
+        <category>央的作品集</category>
+      </categories>
+      <tags>
+        <tag>央</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>典型的环节与系统方框图</title>
     <url>/2022/03/21/control_typical_block/</url>
     <content><![CDATA[<h1 id="典型的环节与系统方框图"><a href="#典型的环节与系统方框图" class="headerlink" title="典型的环节与系统方框图"></a>典型的环节与系统方框图</h1><h2 id="1-典型环节"><a href="#1-典型环节" class="headerlink" title="1 典型环节"></a>1 典型环节</h2><p>所谓环节就是具有相同形式传递函数的原部件的分类。这些传递函数是控制系统最经典最典型的。</p>
@@ -71,12 +86,6 @@
       </tags>
   </entry>
   <entry>
-    <title>测试2</title>
-    <url>/2022/03/20/%E6%B5%8B%E8%AF%952/</url>
-    <content><![CDATA[<p>Just a test.</p>
-]]></content>
-  </entry>
-  <entry>
     <title>感知机(Perceptron)</title>
     <url>/2022/03/21/perceptron/</url>
     <content><![CDATA[<h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1 简介"></a>1 简介</h1><p>感知机是一种简单的，用于二分类的模型。它的构建思想，就是使用一个超平面将数据分为正负两类，输出$+1$或者$-1$。感知机可以使用梯度下降的方法进行最优化，但是其优化算法只在数据线性可分的时候收敛。感知机是Rosenblatt在1957年提出的。</p>
@@ -125,6 +134,12 @@
     <title>第一篇文字</title>
     <url>/2022/03/18/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E5%AD%97/</url>
     <content><![CDATA[<p>以我观物，故物皆着我之色。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>测试2</title>
+    <url>/2022/03/20/%E6%B5%8B%E8%AF%952/</url>
+    <content><![CDATA[<p>Just a test.</p>
 ]]></content>
   </entry>
 </search>
