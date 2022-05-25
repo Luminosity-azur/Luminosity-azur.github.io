@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en,zh" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>无线通信基础——网络传播时延(propagation delay)与传输时延(transmission delay) - Luminosity Blog</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Luminosity,"> 
+    <meta name="description" content="传播时延(propagation delay)数据（更确切地说是光电信号，因为数据在传输的时候，是隐藏在光电信号）从网络一端经过介质传播到另一端的时间。
+决定因素这主要取决于光电信号在介质中传播的速,"> 
+    <meta name="author" content="Luke"> 
+    <link rel="alternative" href="atom.xml" title="Luminosity Blog" type="application/atom+xml"> 
+    <link rel="icon" href="/img/ico.jpg"> 
+    
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="无线通信基础——网络传播时延(propagation delay)与传输时延(transmission delay) - Luminosity Blog"/>
+    <meta name="twitter:description" content="传播时延(propagation delay)数据（更确切地说是光电信号，因为数据在传输的时候，是隐藏在光电信号）从网络一端经过介质传播到另一端的时间。
+决定因素这主要取决于光电信号在介质中传播的速,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="Luminosity Blog"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="无线通信基础——网络传播时延(propagation delay)与传输时延(transmission delay) - Luminosity Blog"/>
+    <meta property="og:description" content="传播时延(propagation delay)数据（更确切地说是光电信号，因为数据在传输的时候，是隐藏在光电信号）从网络一端经过介质传播到另一端的时间。
+决定因素这主要取决于光电信号在介质中传播的速,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.1.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Luminosity Blog</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://liyitao.cn"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">无线通信基础——网络传播时延(propagation delay)与传输时延(transmission delay)</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">无线通信基础——网络传播时延(propagation delay)与传输时延(transmission delay)</h1>
+        <div class="stuff">
+            <span>四月 21, 2022</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h1 id="传播时延-propagation-delay"><a href="#传播时延-propagation-delay" class="headerlink" title="传播时延(propagation delay)"></a>传播时延(propagation delay)</h1><p>数据（更确切地说是光电信号，因为数据在传输的时候，是隐藏在光电信号）从网络一端经过介质传播到另一端的时间。</p>
+<h2 id="决定因素"><a href="#决定因素" class="headerlink" title="决定因素"></a>决定因素</h2><p>这主要取决于光电信号在介质中传播的速度，还有两端直接介质的长度。</p>
+<h1 id="传输时延-transmission-delay"><a href="#传输时延-transmission-delay" class="headerlink" title="传输时延(transmission delay)"></a>传输时延(transmission delay)</h1><p>方便记忆的话，把传输时延改称为发射时延可能会更清晰一点。《计算机网络》（第七版，谢希仁编著）这本书上翻译为传输时延，对于汉语来说容易有歧义，后文也专门加了注解可以理解为发射。</p>
+<h2 id="决定因素-1"><a href="#决定因素-1" class="headerlink" title="决定因素"></a>决定因素</h2><p>其实它指的是数据从开始发送，到发送完成需要的时间。这其实和信道传输速率有很大关系。注意这里说速率就没有歧义，说速度就有歧义。</p>
+<h1 id="用于简易理解两者区分的类比"><a href="#用于简易理解两者区分的类比" class="headerlink" title="用于简易理解两者区分的类比"></a>用于简易理解两者区分的类比</h1><p>传输时延也称发送时延。</p>
+<p>可以用公交车的例子来打比方。传输时延好比公交车开到站台前，站台上等候该公交的乘客从第一个上公交到最后一个上公交结束所花的时间便是传输时延；而公交车载着乘客从这一站开到下一站的路上所花的时间就是传播时延。</p>
+<p>而在网络结构中，我们把数据发送到传播媒介上的过程便是乘客上车的过程；而数据通过电磁信号或光信号的形式在传播媒介上进行传播所花的时间便是传播时延。</p>
+<h1 id="其他时延"><a href="#其他时延" class="headerlink" title="其他时延"></a>其他时延</h1><h2 id="排队时延"><a href="#排队时延" class="headerlink" title="排队时延"></a>排队时延</h2><p>分组在经过网络传输时，要经过许多的路由器。在进入路由器后要先在输入队列中排队等待处理。在路由器确定了转发接口后，还要在输出队列中排队等待转发</p>
+<h2 id="节点处理时延"><a href="#节点处理时延" class="headerlink" title="节点处理时延"></a>节点处理时延</h2><p>节点进行报文存储转发处理（比如解析报文，查找路由表等）所产生的时间</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title="0" data-url="http://link.hhtjim.com/163/586299.mp3"></li>
+                        
+                    
+                        
+                            <li title="1" data-url="http://link.hhtjim.com/163/426881500.mp3"></li>
+                        
+                    
+                        
+                            <li title="2" data-url="http://link.hhtjim.com/163/1384026889.mp3"></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="false"
+        data-ae="false"
+        data-ci=""
+        data-cs=""
+        data-r=""
+        data-o=""
+        data-a=""
+        data-d="false"
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class="side">
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BC%A0%E6%92%AD%E6%97%B6%E5%BB%B6-propagation-delay"><span class="toc-number">1.</span> <span class="toc-text">传播时延(propagation delay)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%B3%E5%AE%9A%E5%9B%A0%E7%B4%A0"><span class="toc-number">1.1.</span> <span class="toc-text">决定因素</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BC%A0%E8%BE%93%E6%97%B6%E5%BB%B6-transmission-delay"><span class="toc-number">2.</span> <span class="toc-text">传输时延(transmission delay)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%B3%E5%AE%9A%E5%9B%A0%E7%B4%A0-1"><span class="toc-number">2.1.</span> <span class="toc-text">决定因素</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E4%BA%8E%E7%AE%80%E6%98%93%E7%90%86%E8%A7%A3%E4%B8%A4%E8%80%85%E5%8C%BA%E5%88%86%E7%9A%84%E7%B1%BB%E6%AF%94"><span class="toc-number">3.</span> <span class="toc-text">用于简易理解两者区分的类比</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E6%97%B6%E5%BB%B6"><span class="toc-number">4.</span> <span class="toc-text">其他时延</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%92%E9%98%9F%E6%97%B6%E5%BB%B6"><span class="toc-number">4.1.</span> <span class="toc-text">排队时延</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8A%82%E7%82%B9%E5%A4%84%E7%90%86%E6%97%B6%E5%BB%B6"><span class="toc-number">4.2.</span> <span class="toc-text">节点处理时延</span></a></li></ol></li></ol>	
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+
+</html>

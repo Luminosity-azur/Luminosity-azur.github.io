@@ -123,23 +123,6 @@
       </tags>
   </entry>
   <entry>
-    <title>无线通信基础——网络传播时延(propagation delay)与传输时延(transmission delay)</title>
-    <url>/2022/04/21/%E6%97%A0%E7%BA%BF%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E7%BD%91%E7%BB%9C%E4%BC%A0%E6%92%AD%E6%97%B6%E5%BB%B6(propagation%20delay)%E4%B8%8E%E4%BC%A0%E8%BE%93%E6%97%B6%E5%BB%B6(transmission%20delay)/</url>
-    <content><![CDATA[<h1 id="传播时延-propagation-delay"><a href="#传播时延-propagation-delay" class="headerlink" title="传播时延(propagation delay)"></a>传播时延(propagation delay)</h1><p>数据（更确切地说是光电信号，因为数据在传输的时候，是隐藏在光电信号）从网络一端经过介质传播到另一端的时间。</p>
-<h2 id="决定因素"><a href="#决定因素" class="headerlink" title="决定因素"></a>决定因素</h2><p>这主要取决于光电信号在介质中传播的速度，还有两端直接介质的长度。</p>
-<h1 id="传输时延-transmission-delay"><a href="#传输时延-transmission-delay" class="headerlink" title="传输时延(transmission delay)"></a>传输时延(transmission delay)</h1><p>方便记忆的话，把传输时延改称为发射时延可能会更清晰一点。《计算机网络》（第七版，谢希仁编著）这本书上翻译为传输时延，对于汉语来说容易有歧义，后文也专门加了注解可以理解为发射。</p>
-<h2 id="决定因素-1"><a href="#决定因素-1" class="headerlink" title="决定因素"></a>决定因素</h2><p>其实它指的是数据从开始发送，到发送完成需要的时间。这其实和信道传输速率有很大关系。注意这里说速率就没有歧义，说速度就有歧义。</p>
-<h1 id="用于简易理解两者区分的类比"><a href="#用于简易理解两者区分的类比" class="headerlink" title="用于简易理解两者区分的类比"></a>用于简易理解两者区分的类比</h1><p>传输时延也称发送时延。</p>
-<p>可以用公交车的例子来打比方。传输时延好比公交车开到站台前，站台上等候该公交的乘客从第一个上公交到最后一个上公交结束所花的时间便是传输时延；而公交车载着乘客从这一站开到下一站的路上所花的时间就是传播时延。</p>
-<p>而在网络结构中，我们把数据发送到传播媒介上的过程便是乘客上车的过程；而数据通过电磁信号或光信号的形式在传播媒介上进行传播所花的时间便是传播时延。</p>
-<h1 id="其他时延"><a href="#其他时延" class="headerlink" title="其他时延"></a>其他时延</h1><h2 id="排队时延"><a href="#排队时延" class="headerlink" title="排队时延"></a>排队时延</h2><p>分组在经过网络传输时，要经过许多的路由器。在进入路由器后要先在输入队列中排队等待处理。在路由器确定了转发接口后，还要在输出队列中排队等待转发</p>
-<h2 id="节点处理时延"><a href="#节点处理时延" class="headerlink" title="节点处理时延"></a>节点处理时延</h2><p>节点进行报文存储转发处理（比如解析报文，查找路由表等）所产生的时间</p>
-]]></content>
-      <categories>
-        <category>无线通信基础</category>
-      </categories>
-  </entry>
-  <entry>
     <title>移动通信基础——TCP三次握手和四次挥手</title>
     <url>/2022/04/17/%E7%A7%BB%E5%8A%A8%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</url>
     <content><![CDATA[<h1 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h1><p>第一次握手：客户端发送syn包(syn&#x3D;x)到服务器，并进入SYN_SEND状态，等待服务器确认；</p>
@@ -154,6 +137,23 @@
 ]]></content>
       <categories>
         <category>移动通信基础</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>无线通信基础——网络传播时延(propagation delay)与传输时延(transmission delay)</title>
+    <url>/2022/04/21/%E6%97%A0%E7%BA%BF%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E7%BD%91%E7%BB%9C%E4%BC%A0%E6%92%AD%E6%97%B6%E5%BB%B6(propagation%20delay)%E4%B8%8E%E4%BC%A0%E8%BE%93%E6%97%B6%E5%BB%B6(transmission%20delay)/</url>
+    <content><![CDATA[<h1 id="传播时延-propagation-delay"><a href="#传播时延-propagation-delay" class="headerlink" title="传播时延(propagation delay)"></a>传播时延(propagation delay)</h1><p>数据（更确切地说是光电信号，因为数据在传输的时候，是隐藏在光电信号）从网络一端经过介质传播到另一端的时间。</p>
+<h2 id="决定因素"><a href="#决定因素" class="headerlink" title="决定因素"></a>决定因素</h2><p>这主要取决于光电信号在介质中传播的速度，还有两端直接介质的长度。</p>
+<h1 id="传输时延-transmission-delay"><a href="#传输时延-transmission-delay" class="headerlink" title="传输时延(transmission delay)"></a>传输时延(transmission delay)</h1><p>方便记忆的话，把传输时延改称为发射时延可能会更清晰一点。《计算机网络》（第七版，谢希仁编著）这本书上翻译为传输时延，对于汉语来说容易有歧义，后文也专门加了注解可以理解为发射。</p>
+<h2 id="决定因素-1"><a href="#决定因素-1" class="headerlink" title="决定因素"></a>决定因素</h2><p>其实它指的是数据从开始发送，到发送完成需要的时间。这其实和信道传输速率有很大关系。注意这里说速率就没有歧义，说速度就有歧义。</p>
+<h1 id="用于简易理解两者区分的类比"><a href="#用于简易理解两者区分的类比" class="headerlink" title="用于简易理解两者区分的类比"></a>用于简易理解两者区分的类比</h1><p>传输时延也称发送时延。</p>
+<p>可以用公交车的例子来打比方。传输时延好比公交车开到站台前，站台上等候该公交的乘客从第一个上公交到最后一个上公交结束所花的时间便是传输时延；而公交车载着乘客从这一站开到下一站的路上所花的时间就是传播时延。</p>
+<p>而在网络结构中，我们把数据发送到传播媒介上的过程便是乘客上车的过程；而数据通过电磁信号或光信号的形式在传播媒介上进行传播所花的时间便是传播时延。</p>
+<h1 id="其他时延"><a href="#其他时延" class="headerlink" title="其他时延"></a>其他时延</h1><h2 id="排队时延"><a href="#排队时延" class="headerlink" title="排队时延"></a>排队时延</h2><p>分组在经过网络传输时，要经过许多的路由器。在进入路由器后要先在输入队列中排队等待处理。在路由器确定了转发接口后，还要在输出队列中排队等待转发</p>
+<h2 id="节点处理时延"><a href="#节点处理时延" class="headerlink" title="节点处理时延"></a>节点处理时延</h2><p>节点进行报文存储转发处理（比如解析报文，查找路由表等）所产生的时间</p>
+]]></content>
+      <categories>
+        <category>无线通信基础</category>
       </categories>
   </entry>
   <entry>
