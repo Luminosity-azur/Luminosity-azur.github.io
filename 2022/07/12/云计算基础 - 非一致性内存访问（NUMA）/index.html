@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en,zh" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>云计算基础 - 非一致性内存访问（NUMA） - Luminosity Blog</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Luminosity,"> 
+    <meta name="description" content="三种系统架构 &amp;amp; 两种存储器共享方式从系统架构来看，目前的商用服务器大体可以分为三类：
+（1）对称多处理器结构(SMP：Symmetric Multi-Processor)
+（2）非一致内存,"> 
+    <meta name="author" content="Luke"> 
+    <link rel="alternative" href="atom.xml" title="Luminosity Blog" type="application/atom+xml"> 
+    <link rel="icon" href="/img/ico.jpg"> 
+    
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="云计算基础 - 非一致性内存访问（NUMA） - Luminosity Blog"/>
+    <meta name="twitter:description" content="三种系统架构 &amp;amp; 两种存储器共享方式从系统架构来看，目前的商用服务器大体可以分为三类：
+（1）对称多处理器结构(SMP：Symmetric Multi-Processor)
+（2）非一致内存,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="Luminosity Blog"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="云计算基础 - 非一致性内存访问（NUMA） - Luminosity Blog"/>
+    <meta property="og:description" content="三种系统架构 &amp;amp; 两种存储器共享方式从系统架构来看，目前的商用服务器大体可以分为三类：
+（1）对称多处理器结构(SMP：Symmetric Multi-Processor)
+（2）非一致内存,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.1.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Luminosity Blog</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://liyitao.cn"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">云计算基础 - 非一致性内存访问（NUMA）</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">云计算基础 - 非一致性内存访问（NUMA）</h1>
+        <div class="stuff">
+            <span>七月 12, 2022</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E4%BA%91%E8%AE%A1%E7%AE%97%E5%9F%BA%E7%A1%80/" rel="tag">云计算基础</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h3 id="三种系统架构-amp-两种存储器共享方式"><a href="#三种系统架构-amp-两种存储器共享方式" class="headerlink" title="三种系统架构 &amp; 两种存储器共享方式"></a>三种系统架构 &amp; 两种存储器共享方式</h3><p>从系统架构来看，目前的商用服务器大体可以分为三类：</p>
+<p>（1）对称多处理器结构(SMP：Symmetric Multi-Processor)</p>
+<p>（2）非一致内存访问结构(NUMA：Non-Uniform Memory Access)</p>
+<p>（3）海量并行处理结构(MPP：Massive Parallel Processing)。</p>
+<p>共享存储型多处理机有两种技术</p>
+<p>（1）均匀存储器存取（Uniform-Memory-Access，简称UMA）技术</p>
+<p>（2）非均匀存储器存取（Nonuniform-Memory-Access，简称NUMA）技术</p>
+<h3 id="UMA技术"><a href="#UMA技术" class="headerlink" title="UMA技术"></a>UMA技术</h3><p>UMA是并行计算机中的共享存储架构，即物理存储器被所有处理机均匀共享，对所有存储字具有相同的存取时间。每台处理机可以有私用高速缓存,外围设备也以一定形式共享。UMA技术适合于普通需求和多用户共享时间的应用，在时序要求严格的应用中，被用作加速单一大型程序的执行率。</p>
+<h3 id="NUMA技术"><a href="#NUMA技术" class="headerlink" title="NUMA技术"></a>NUMA技术</h3><p>NUMA是用于多进程计算中的存储设计，存储读取取决于当前存储器与处理器的关联。在NUMA技术下，处理器访问本地存储器比非本地存储器（另一个处理器的本地存储器或者处理器共享的存储器）更快。</p>
+<h3 id="vNUMA"><a href="#vNUMA" class="headerlink" title="vNUMA"></a>vNUMA</h3><p>vNUMA消除了VM和操作系统之间的透明性，并将NUMA架构直通到VM的操作系统。值得一提的是，vNUMA在业内与NUMA同样盛名。对于一个广泛VM技术，VM运行的底层架构，VM的NUMA拓扑跨越多个NUMA节点。在启用了vNUMA的VM的初始功能之后，呈现给操作系统的架构是永久定义的，并且不能被修改。这个限制通常是正面的，因为改变vNUMA体系结构可能会导致操作系统的不稳定，但是如果VM通过vMotion迁移到带有不同NUMA架构的管理程序，则可能导致性能问题。值得一提的是，尽管大多数应用程序都可以利用vNUMA，但大多数VM都足够小，可以装入NUMA节点;最近对宽-VM支持或vNUMA的优化并不影响它们。</p>
+<p>因此，客户操作系统或它的应用程序如何放置进程和内存会显著影响性能。将NUMA拓扑暴露给VM的好处是，允许用户根据底层NUMA架构做出最优决策。通过假设用户操作系统将在暴露的vNUMA拓扑结构中做出最佳决策，而不是在NUMA客户机之间插入内存。</p>
+<h3 id="NUMA的重要性"><a href="#NUMA的重要性" class="headerlink" title="NUMA的重要性"></a>NUMA的重要性</h3><p>多线程应用程序需要访问CPU核心的本地内存，当它必须使用远程内存时，性能将会受到延迟的影响。访问远程内存要比本地内存慢得多。所以使用NUMA会提高性能。 现代操作系统试图在NUMA节点（本地内存+本地CPU&#x3D;NUMA节点）上调度进程，进程将使用本地NUMA节点访问核心。ESXi还使用NUMA技术为广泛的虚拟机，当虚拟核心大于8时，将虚拟核心分布在多个NUMA节点上。当机器启动时，虚拟核心将被分发到不同的NUMA节点，它将提高性能，因为虚拟核心将访问本地内存。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>首当为一个虚拟内核分配了更多的虚拟Socket，或者一个虚拟Socket分配更多的虚拟内核时，这之间的差别并不影响NUMA节点数量。虚拟Socket只会影响软件许可证而不是性能。</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title="0" data-url="http://link.hhtjim.com/163/586299.mp3"></li>
+                        
+                    
+                        
+                            <li title="1" data-url="http://link.hhtjim.com/163/426881500.mp3"></li>
+                        
+                    
+                        
+                            <li title="2" data-url="http://link.hhtjim.com/163/1384026889.mp3"></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="false"
+        data-ae="false"
+        data-ci=""
+        data-cs=""
+        data-r=""
+        data-o=""
+        data-a=""
+        data-d="false"
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class="side">
+			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E7%A7%8D%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84-amp-%E4%B8%A4%E7%A7%8D%E5%AD%98%E5%82%A8%E5%99%A8%E5%85%B1%E4%BA%AB%E6%96%B9%E5%BC%8F"><span class="toc-number">1.</span> <span class="toc-text">三种系统架构 &amp; 两种存储器共享方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UMA%E6%8A%80%E6%9C%AF"><span class="toc-number">2.</span> <span class="toc-text">UMA技术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NUMA%E6%8A%80%E6%9C%AF"><span class="toc-number">3.</span> <span class="toc-text">NUMA技术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vNUMA"><span class="toc-number">4.</span> <span class="toc-text">vNUMA</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NUMA%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7"><span class="toc-number">5.</span> <span class="toc-text">NUMA的重要性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">6.</span> <span class="toc-text">总结</span></a></li></ol>	
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+
+</html>

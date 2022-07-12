@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="en,zh" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>云计算基础——VXLAN - Luminosity Blog</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Luminosity,"> 
+    <meta name="description" content="VXLAN概述及产生原因1、虚拟机规模收到网络设备表现规格的限制
+服务器虚拟化导致虚拟机的数量呈现几何级增加，伴随而来的是虚拟机网卡MAC地址数量的剧增。原接入侧的二层设备的MAC地址表规格不能满足,"> 
+    <meta name="author" content="Luke"> 
+    <link rel="alternative" href="atom.xml" title="Luminosity Blog" type="application/atom+xml"> 
+    <link rel="icon" href="/img/ico.jpg"> 
+    
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="云计算基础——VXLAN - Luminosity Blog"/>
+    <meta name="twitter:description" content="VXLAN概述及产生原因1、虚拟机规模收到网络设备表现规格的限制
+服务器虚拟化导致虚拟机的数量呈现几何级增加，伴随而来的是虚拟机网卡MAC地址数量的剧增。原接入侧的二层设备的MAC地址表规格不能满足,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="Luminosity Blog"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="云计算基础——VXLAN - Luminosity Blog"/>
+    <meta property="og:description" content="VXLAN概述及产生原因1、虚拟机规模收到网络设备表现规格的限制
+服务器虚拟化导致虚拟机的数量呈现几何级增加，伴随而来的是虚拟机网卡MAC地址数量的剧增。原接入侧的二层设备的MAC地址表规格不能满足,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.1.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Luminosity Blog</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://liyitao.cn"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">云计算基础——VXLAN</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">云计算基础——VXLAN</h1>
+        <div class="stuff">
+            <span>七月 12, 2022</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E4%BA%91%E8%AE%A1%E7%AE%97%E5%9F%BA%E7%A1%80/" rel="tag">云计算基础</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h3 id="VXLAN概述及产生原因"><a href="#VXLAN概述及产生原因" class="headerlink" title="VXLAN概述及产生原因"></a>VXLAN概述及产生原因</h3><p>1、虚拟机规模收到网络设备表现规格的限制</p>
+<p>服务器虚拟化导致虚拟机的数量呈现几何级增加，伴随而来的是虚拟机网卡MAC地址数量的剧增。原接入侧的二层设备的MAC地址表规格不能满足快速增长的虚拟机数量。</p>
+<p>VXLAN的解决方式：</p>
+<p>VXLAN将网络管理员规划的同一区域内的虚拟机发出的报文封装成新的UDP报文，并使用物理网络的IP和MAC地址作为外层头，这样报文对网络中的其他设备只表现为封装后的参数。</p>
+<p>2、网络的隔离能力有限</p>
+<p>对于现今公有云或者大型虚拟化计算服务器需要上万甚至更多租户的情况，现有的VLAN数量不足以满足这个需求</p>
+<p>VXLAN的解决方式：</p>
+<p>VXLAN引入了类似VLAN ID的用户标识，成为VXLAN网络标识VNI （VXLAN Network Idendifier）,由24bit组成，因此最多可支持16M的VXLAN段。</p>
+<p>3、虚拟机迁移范围受限</p>
+<p>传统的二层网络，不能满足已经成为常态的作业的虚拟机迁移，也不能满足保障迁移范围和业务的可用性不受限制等业务。</p>
+<p>VXLAN的解决方式:</p>
+<p>VXLAN将虚拟机发出的原始报文进行封装后通过VXLAN隧道进行传输，这个隧道可以跨越任意网络，因此对于处于同一网段的虚拟机而言，从逻辑上看，相当于处于同一个二层域。也就是说，VXLAN技术在三层网络上构建可一个虚拟的大二层网络，只要虚拟机路由可达，就可以将其规划到同一个大二层网络中。</p>
+<h3 id="VXLAN的原理"><a href="#VXLAN的原理" class="headerlink" title="VXLAN的原理"></a>VXLAN的原理</h3><p>VXLAN是一种网络虚拟化技术,通过将原主机发出的数据报文封装在UDP中，并使用物理网络的IP、MAC最为外层头并行封装,然后在IP网络上传输,到达目的地后由隧道终结点解封装并将数据发送到目标主机。<br>VXLAN的UDP端口号:4789</p>
+<h3 id="VXLAN报文封装格式"><a href="#VXLAN报文封装格式" class="headerlink" title="VXLAN报文封装格式"></a>VXLAN报文封装格式</h3><p>VXLAN的通信过程:</p>
+<p>1、发送方向接收方发送数据帧，帧中包含了发送方和接收方的虚拟MAC地址。</p>
+<p>2、发送方连接的VTEP节点收到了数据帧，进行封装并发送给目的VTEP节点。</p>
+<p>3、报文经过Underlay网络传输到目的的VTEP节点</p>
+<p>4、目的VTEP节点收到报文后，解封装得到内部数据帧，并将此数据帧交付给接收方。</p>
+<p>5、接收方收到数据帧，传输完成。</p>
+<h3 id="配置实例"><a href="#配置实例" class="headerlink" title="配置实例"></a>配置实例</h3><div align=center> 
+<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/75ba1a3b4bb833a8.png'></img>
+<div align=left>
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title="0" data-url="http://link.hhtjim.com/163/586299.mp3"></li>
+                        
+                    
+                        
+                            <li title="1" data-url="http://link.hhtjim.com/163/426881500.mp3"></li>
+                        
+                    
+                        
+                            <li title="2" data-url="http://link.hhtjim.com/163/1384026889.mp3"></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="false"
+        data-ae="false"
+        data-ci=""
+        data-cs=""
+        data-r=""
+        data-o=""
+        data-a=""
+        data-d="false"
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class="side">
+			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#VXLAN%E6%A6%82%E8%BF%B0%E5%8F%8A%E4%BA%A7%E7%94%9F%E5%8E%9F%E5%9B%A0"><span class="toc-number">1.</span> <span class="toc-text">VXLAN概述及产生原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#VXLAN%E7%9A%84%E5%8E%9F%E7%90%86"><span class="toc-number">2.</span> <span class="toc-text">VXLAN的原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#VXLAN%E6%8A%A5%E6%96%87%E5%B0%81%E8%A3%85%E6%A0%BC%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text">VXLAN报文封装格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E5%AE%9E%E4%BE%8B"><span class="toc-number">4.</span> <span class="toc-text">配置实例</span></a></li></ol>	
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+
+</html>

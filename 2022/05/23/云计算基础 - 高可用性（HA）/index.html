@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="en,zh" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>云计算基础 - 高可用性（HA） - Luminosity Blog</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Luminosity,"> 
+    <meta name="description" content="什么是高可用性 (HA)　　“高可用性”（High Availability）通常来描述一个系统经过专门的设计，从而减少停工时间，而保持其服务的高度可用性。　　例如我们希望电力、水力服务是高可用性的,"> 
+    <meta name="author" content="Luke"> 
+    <link rel="alternative" href="atom.xml" title="Luminosity Blog" type="application/atom+xml"> 
+    <link rel="icon" href="/img/ico.jpg"> 
+    
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="云计算基础 - 高可用性（HA） - Luminosity Blog"/>
+    <meta name="twitter:description" content="什么是高可用性 (HA)　　“高可用性”（High Availability）通常来描述一个系统经过专门的设计，从而减少停工时间，而保持其服务的高度可用性。　　例如我们希望电力、水力服务是高可用性的,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="Luminosity Blog"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="云计算基础 - 高可用性（HA） - Luminosity Blog"/>
+    <meta property="og:description" content="什么是高可用性 (HA)　　“高可用性”（High Availability）通常来描述一个系统经过专门的设计，从而减少停工时间，而保持其服务的高度可用性。　　例如我们希望电力、水力服务是高可用性的,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.1.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Luminosity Blog</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://liyitao.cn"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">云计算基础 - 高可用性（HA）</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">云计算基础 - 高可用性（HA）</h1>
+        <div class="stuff">
+            <span>五月 23, 2022</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E4%BA%91%E8%AE%A1%E7%AE%97%E5%9F%BA%E7%A1%80/" rel="tag">云计算基础</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h3 id="什么是高可用性-HA"><a href="#什么是高可用性-HA" class="headerlink" title="什么是高可用性 (HA)"></a>什么是高可用性 (HA)</h3><p>　　“高可用性”（High Availability）通常来描述一个系统经过专门的设计，从而减少停工时间，而保持其服务的高度可用性。<br>　　例如我们希望电力、水力服务是高可用性的系统。<br>　　计算机系统的可靠性用平均无故障时间（MTTF）来度量，即计算机系统平均能够正常运行多长时间，才发生一次故障。系统的可靠性越高，平均无故障时间越长。可维护性用平均维修时间（MTTR）来度量，即系统发生故障后维修和重新恢复正常运行平均花费的时间。系统的可维护性越好，平均维修时间越短。计算机系统的可用性定义为：MTTF&#x2F;(MTTF+MTTR) * 100%。由此可见，计算机系统的可用性定义为系统保持正常运行时间的百分比。</p>
+<h3 id="负载均衡服务器的高可用性"><a href="#负载均衡服务器的高可用性" class="headerlink" title="负载均衡服务器的高可用性"></a>负载均衡服务器的高可用性</h3><p>　　为了屏蔽负载均衡服务器的失效，需要建立一个备份机。主服务器和备份机上都运行High Availability监控程序，通过传送诸如“I am alive”这样的信息来监控对方的运行状况。当备份机不能在一定的时间内收到这样的信息时，它就接管主服务器的服务IP并继续提供服务；当备份管理器又从主管理器收到“I am alive”这样的信息是，它就释放服务IP地址，这样的主管理器就开开始再次进行集群管理的工作了。为在主服务器失效的情况下系统能正常工作，我们在主、备份机之间实现负载集群系统配置信息的同步与备份，保持二者系统的基本一致。</p>
+<h3 id="HA的容错备援运作过程"><a href="#HA的容错备援运作过程" class="headerlink" title="HA的容错备援运作过程"></a>HA的容错备援运作过程</h3><h4 id="自动侦测-Auto-Detect-阶段"><a href="#自动侦测-Auto-Detect-阶段" class="headerlink" title="自动侦测(Auto-Detect)阶段"></a>自动侦测(Auto-Detect)阶段</h4><p>由主机上的软件通过冗余侦测线，经由复杂的监听程序。逻辑判断，来相互侦测对方运行的情况，所检查的项目有：主机硬件(CPU和周边)、主机网络、主机操作系统、数据库引擎及其它应用程序、主机与磁盘阵列连线。为确保侦测的正确性，而防止错误的判断，可设定安全侦测时间，包括侦测时间间隔，侦测次数以调整安全系数，并且由主机的冗余通信连线，将所汇集的讯息记录下来，以供维护参考。 </p>
+<h4 id="自动切换-Auto-Switch-阶段"><a href="#自动切换-Auto-Switch-阶段" class="headerlink" title="自动切换(Auto-Switch)阶段"></a>自动切换(Auto-Switch)阶段</h4><p>某一主机如果确认对方故障，则正常主机除继续进行原来的任务，还将依据各种容错备援模式接管预先设定的备援作业程序，并进行后续的程序及服务。 </p>
+<h4 id="自动恢复-Auto-Recovery-阶段"><a href="#自动恢复-Auto-Recovery-阶段" class="headerlink" title="自动恢复(Auto-Recovery)阶段"></a>自动恢复(Auto-Recovery)阶段</h4><p>在正常主机代替故障主机工作后，故障主机可离线进行修复工作。在故障主机修复后，透过冗余通讯线与原正常主机连线，自动切换回修复完成的主机上。整个回复过程完成由EDI-HA自动完成，亦可依据预先配置，选择回复动作为半自动或不回复。
+　</p>
+<h3 id="HA三种工作方式："><a href="#HA三种工作方式：" class="headerlink" title="HA三种工作方式："></a>HA三种工作方式：</h3><p>　　（1）主从方式 （非对称方式）<br>　　工作原理：主机工作，备机处于监控准备状况；当主机宕机时，备机接管主机的一切工作，待主机恢复正常后，按使用者的设定以自动或手动方式将服务切换到主机上运行，数据的一致性通过共享存储系统解决。<br>　　（2）双机双工方式（互备互援）<br>　　工作原理：两台主机同时运行各自的服务工作且相互监测情况，当任一台主机宕机时，另一台主机立即接管它的一切工作，保证工作实时，应用服务系统的关键数据存放在共享存储系统中。<br>　　（3）集群工作方式（多服务器互备方式）<br>　　工作原理：多台主机一起工作，各自运行一个或几个服务，各为服务定义一个或多个备用主机，当某个主机故障时，运行在其上的服务就可以被其它主机接管。
+　　 </p>
+<h3 id="高可用性的衡量指标"><a href="#高可用性的衡量指标" class="headerlink" title="高可用性的衡量指标"></a>高可用性的衡量指标</h3><p>　　可用性的计算公式：<br>　　％availability＝（Total Elapsed Time－Sum of Inoperative Times）&#x2F; Total Elapsed Time<br>　　elapsed time为operating time＋downtime。<br>　　可用性和系统组件的失败率相关。衡量系统设备失败率的一个指标是“失败间隔平均时间”MTBF（mean time between failures）。通常这个指标衡量系统的组件，如磁盘。<br>　　MTBF＝Total Operating Time &#x2F; Total No. of Failures<br>　　Operating time为系统在使用的时间（不包含停机情况）。 </p>
+<h3 id="高可用性系统的设计"><a href="#高可用性系统的设计" class="headerlink" title="高可用性系统的设计"></a>高可用性系统的设计</h3><p>　　设计系统的可用性，最重要的是满足用户的需求。系统的失败只有当其导致服务的失效性足以影响到系统用户的需求时才会影响其可用性的指标。用户的敏感性决定于系统提供的应用。例如，在一个能在1秒钟之内被修复的失败在一些联机事务处理系统中并不会被感知到，但如果是对于一个实时的科学计算应用系统，则是不可被接受的。<br>　　系统的高可用性设计决定于您的应用。例如，如果几个小时的计划停机时间是可接受的，也许存储系统就不用设计为磁盘可热插拔的。反之，你可能就应该采用可热插拔、热交换和镜像的磁盘系统。<br>　　所以涉及高可用系统需要考虑：<br>　　决定业务中断的持续时间。根据公式计算出的衡量HA的指标，可以得到一段时间内可以中断的时间。但可能很大量的短时间中断是可以忍受的，而少量长时间的中断却是不可忍受的。<br>　　在统计中表明，造成非计划的宕机因素并非都是硬件问题。硬件问题只占40％，软件问题占30％，人为因素占20％，环境因素占10％。您的高可用性系统应该能尽可能地考虑到上述所有因素。<br>　　当出现业务中断时，尽快恢复的手段。 </p>
+<h3 id="导致计划内的停机因素有："><a href="#导致计划内的停机因素有：" class="headerlink" title="导致计划内的停机因素有："></a>导致计划内的停机因素有：</h3><p>　　周期性的备份<br>　　软件升级<br>　　硬件扩充或维修<br>　　系统配置更改<br>　　数据更改 </p>
+<h3 id="导致计划外停机的因素有："><a href="#导致计划外停机的因素有：" class="headerlink" title="导致计划外停机的因素有："></a>导致计划外停机的因素有：</h3><p>　　硬件失败<br>　　文件系统满错误<br>　　内存溢出<br>　　备份失败<br>　　磁盘满<br>　　供电失败<br>　　网络失败<br>　　应用失败<br>　　自然灾害<br>　　操作或管理失误<br>　　通过有针对性的设计，可以避免上述全部或部分因素带来的损失。当然，100％的高可用系统是不存在的。 </p>
+<h3 id="创建高可用性的计算机系统"><a href="#创建高可用性的计算机系统" class="headerlink" title="创建高可用性的计算机系统"></a>创建高可用性的计算机系统</h3><p>　　在UNIX系统上创建高可用性计算机系统，业界的通行做法，也是非常有效的做法，就是采用群集系统（Cluster），将各个主机系统通过网络或其他手段有机地组成一个群体，共同对外提供服务。创建群集系统，通过实现高可用性的软件将冗余的高可用性的硬件组件和软件组件组合起来，消除单点故障：<br>　　消除供电的单点故障<br>　　消除磁盘的单点故障<br>　　消除SPU（System Process Unit）单点故障<br>　　消除网络单点故障<br>　　消除软件单点故障<br>　　尽量消除单系统运行时的单点故障</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title="0" data-url="http://link.hhtjim.com/163/586299.mp3"></li>
+                        
+                    
+                        
+                            <li title="1" data-url="http://link.hhtjim.com/163/426881500.mp3"></li>
+                        
+                    
+                        
+                            <li title="2" data-url="http://link.hhtjim.com/163/1384026889.mp3"></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="false"
+        data-ae="false"
+        data-ci=""
+        data-cs=""
+        data-r=""
+        data-o=""
+        data-a=""
+        data-d="false"
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class="side">
+			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E9%AB%98%E5%8F%AF%E7%94%A8%E6%80%A7-HA"><span class="toc-number">1.</span> <span class="toc-text">什么是高可用性 (HA)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%AB%98%E5%8F%AF%E7%94%A8%E6%80%A7"><span class="toc-number">2.</span> <span class="toc-text">负载均衡服务器的高可用性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HA%E7%9A%84%E5%AE%B9%E9%94%99%E5%A4%87%E6%8F%B4%E8%BF%90%E4%BD%9C%E8%BF%87%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">HA的容错备援运作过程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E4%BE%A6%E6%B5%8B-Auto-Detect-%E9%98%B6%E6%AE%B5"><span class="toc-number">3.1.</span> <span class="toc-text">自动侦测(Auto-Detect)阶段</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E5%88%87%E6%8D%A2-Auto-Switch-%E9%98%B6%E6%AE%B5"><span class="toc-number">3.2.</span> <span class="toc-text">自动切换(Auto-Switch)阶段</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E6%81%A2%E5%A4%8D-Auto-Recovery-%E9%98%B6%E6%AE%B5"><span class="toc-number">3.3.</span> <span class="toc-text">自动恢复(Auto-Recovery)阶段</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HA%E4%B8%89%E7%A7%8D%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F%EF%BC%9A"><span class="toc-number">4.</span> <span class="toc-text">HA三种工作方式：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E5%8F%AF%E7%94%A8%E6%80%A7%E7%9A%84%E8%A1%A1%E9%87%8F%E6%8C%87%E6%A0%87"><span class="toc-number">5.</span> <span class="toc-text">高可用性的衡量指标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E5%8F%AF%E7%94%A8%E6%80%A7%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%AE%BE%E8%AE%A1"><span class="toc-number">6.</span> <span class="toc-text">高可用性系统的设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E8%87%B4%E8%AE%A1%E5%88%92%E5%86%85%E7%9A%84%E5%81%9C%E6%9C%BA%E5%9B%A0%E7%B4%A0%E6%9C%89%EF%BC%9A"><span class="toc-number">7.</span> <span class="toc-text">导致计划内的停机因素有：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E8%87%B4%E8%AE%A1%E5%88%92%E5%A4%96%E5%81%9C%E6%9C%BA%E7%9A%84%E5%9B%A0%E7%B4%A0%E6%9C%89%EF%BC%9A"><span class="toc-number">8.</span> <span class="toc-text">导致计划外停机的因素有：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E9%AB%98%E5%8F%AF%E7%94%A8%E6%80%A7%E7%9A%84%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F"><span class="toc-number">9.</span> <span class="toc-text">创建高可用性的计算机系统</span></a></li></ol>	
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+
+</html>
