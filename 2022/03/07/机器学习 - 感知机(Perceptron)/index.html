@@ -5,13 +5,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>云计算基础——VXLAN - Luminosity Blog</title>
+    <title>机器学习 - 感知机(Perceptron) - Luminosity Blog</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Luminosity,"> 
-    <meta name="description" content="VXLAN概述及产生原因1、虚拟机规模收到网络设备表现规格的限制
-服务器虚拟化导致虚拟机的数量呈现几何级增加，伴随而来的是虚拟机网卡MAC地址数量的剧增。原接入侧的二层设备的MAC地址表规格不能满足,"> 
+    <meta name="description" content="1 简介感知机是一种简单的，用于二分类的模型。它的构建思想，就是使用一个超平面将数据分为正负两类，输出$+1$或者$-1$。感知机可以使用梯度下降的方法进行最优化，但是其优化算法只在数据线性可分的时,"> 
     <meta name="author" content="Luke"> 
     <link rel="alternative" href="atom.xml" title="Luminosity Blog" type="application/atom+xml"> 
     <link rel="icon" href="/img/ico.jpg"> 
@@ -19,18 +18,16 @@
     
     
     <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:title" content="云计算基础——VXLAN - Luminosity Blog"/>
-    <meta name="twitter:description" content="VXLAN概述及产生原因1、虚拟机规模收到网络设备表现规格的限制
-服务器虚拟化导致虚拟机的数量呈现几何级增加，伴随而来的是虚拟机网卡MAC地址数量的剧增。原接入侧的二层设备的MAC地址表规格不能满足,"/>
+    <meta name="twitter:title" content="机器学习 - 感知机(Perceptron) - Luminosity Blog"/>
+    <meta name="twitter:description" content="1 简介感知机是一种简单的，用于二分类的模型。它的构建思想，就是使用一个超平面将数据分为正负两类，输出$+1$或者$-1$。感知机可以使用梯度下降的方法进行最优化，但是其优化算法只在数据线性可分的时,"/>
     
     
     
     
     <meta property="og:site_name" content="Luminosity Blog"/>
     <meta property="og:type" content="object"/>
-    <meta property="og:title" content="云计算基础——VXLAN - Luminosity Blog"/>
-    <meta property="og:description" content="VXLAN概述及产生原因1、虚拟机规模收到网络设备表现规格的限制
-服务器虚拟化导致虚拟机的数量呈现几何级增加，伴随而来的是虚拟机网卡MAC地址数量的剧增。原接入侧的二层设备的MAC地址表规格不能满足,"/>
+    <meta property="og:title" content="机器学习 - 感知机(Perceptron) - Luminosity Blog"/>
+    <meta property="og:description" content="1 简介感知机是一种简单的，用于二分类的模型。它的构建思想，就是使用一个超平面将数据分为正负两类，输出$+1$或者$-1$。感知机可以使用梯度下降的方法进行最优化，但是其优化算法只在数据线性可分的时,"/>
     
 <link rel="stylesheet" href="/css/diaspora.css">
 
@@ -46,7 +43,7 @@
     <div class="bar" style="width: 0;"></div>
     <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://liyitao.cn"></a>
     <div title="播放/暂停" class="iconfont icon-play"></div>
-    <h3 class="subtitle">云计算基础——VXLAN</h3>
+    <h3 class="subtitle">机器学习 - 感知机(Perceptron)</h3>
     <div class="social">
         <div>
             <div class="share">
@@ -61,37 +58,42 @@
     <div class="section">
         <div class="article">
     <div class='main'>
-        <h1 class="title">云计算基础——VXLAN</h1>
+        <h1 class="title">机器学习 - 感知机(Perceptron)</h1>
         <div class="stuff">
-            <span>七月 12, 2022</span>
+            <span>三月 07, 2022</span>
             
-  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E4%BA%91%E8%AE%A1%E7%AE%97%E5%9F%BA%E7%A1%80/" rel="tag">云计算基础</a></li></ul>
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag">机器学习</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0/" rel="tag">统计学习</a></li></ul>
 
 
         </div>
         <div class="content markdown">
-            <h3 id="VXLAN概述及产生原因"><a href="#VXLAN概述及产生原因" class="headerlink" title="VXLAN概述及产生原因"></a>VXLAN概述及产生原因</h3><p>1、虚拟机规模收到网络设备表现规格的限制</p>
-<p>服务器虚拟化导致虚拟机的数量呈现几何级增加，伴随而来的是虚拟机网卡MAC地址数量的剧增。原接入侧的二层设备的MAC地址表规格不能满足快速增长的虚拟机数量。</p>
-<p>VXLAN的解决方式：</p>
-<p>VXLAN将网络管理员规划的同一区域内的虚拟机发出的报文封装成新的UDP报文，并使用物理网络的IP和MAC地址作为外层头，这样报文对网络中的其他设备只表现为封装后的参数。</p>
-<p>2、网络的隔离能力有限</p>
-<p>对于现今公有云或者大型虚拟化计算服务器需要上万甚至更多租户的情况，现有的VLAN数量不足以满足这个需求</p>
-<p>VXLAN的解决方式：</p>
-<p>VXLAN引入了类似VLAN ID的用户标识，成为VXLAN网络标识VNI （VXLAN Network Idendifier）,由24bit组成，因此最多可支持16M的VXLAN段。</p>
-<p>3、虚拟机迁移范围受限</p>
-<p>传统的二层网络，不能满足已经成为常态的作业的虚拟机迁移，也不能满足保障迁移范围和业务的可用性不受限制等业务。</p>
-<p>VXLAN的解决方式:</p>
-<p>VXLAN将虚拟机发出的原始报文进行封装后通过VXLAN隧道进行传输，这个隧道可以跨越任意网络，因此对于处于同一网段的虚拟机而言，从逻辑上看，相当于处于同一个二层域。也就是说，VXLAN技术在三层网络上构建可一个虚拟的大二层网络，只要虚拟机路由可达，就可以将其规划到同一个大二层网络中。</p>
-<h3 id="VXLAN的原理"><a href="#VXLAN的原理" class="headerlink" title="VXLAN的原理"></a>VXLAN的原理</h3><p>VXLAN是一种网络虚拟化技术,通过将原主机发出的数据报文封装在UDP中，并使用物理网络的IP、MAC最为外层头并行封装,然后在IP网络上传输,到达目的地后由隧道终结点解封装并将数据发送到目标主机。<br>VXLAN的UDP端口号:4789</p>
-<h3 id="VXLAN报文封装格式"><a href="#VXLAN报文封装格式" class="headerlink" title="VXLAN报文封装格式"></a>VXLAN报文封装格式</h3><p>VXLAN的通信过程:</p>
-<p>1、发送方向接收方发送数据帧，帧中包含了发送方和接收方的虚拟MAC地址。</p>
-<p>2、发送方连接的VTEP节点收到了数据帧，进行封装并发送给目的VTEP节点。</p>
-<p>3、报文经过Underlay网络传输到目的的VTEP节点</p>
-<p>4、目的VTEP节点收到报文后，解封装得到内部数据帧，并将此数据帧交付给接收方。</p>
-<p>5、接收方收到数据帧，传输完成。</p>
-<h3 id="配置实例"><a href="#配置实例" class="headerlink" title="配置实例"></a>配置实例</h3><div align=center> 
-<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/75ba1a3b4bb833a8.png'></img>
-<div align=left>
+            <h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1 简介"></a>1 简介</h1><p>感知机是一种简单的，用于二分类的模型。它的构建思想，就是使用一个超平面将数据分为正负两类，输出$+1$或者$-1$。感知机可以使用梯度下降的方法进行最优化，但是其优化算法只在数据线性可分的时候收敛。感知机是Rosenblatt在1957年提出的。</p>
+<h1 id="2-模型的构建"><a href="#2-模型的构建" class="headerlink" title="2 模型的构建"></a>2 模型的构建</h1><p>由上述构建思想可知，感知机要将一个特征空间为$X \subseteq R^n$的数据映射到输出空间$Y&#x3D;{+1,-1}$。使用$x\in X$表示训练数据的特征向量，$y\in Y$表示输出的值。之前提到过，感知机使用超平面来区分正类和负类，那么就可以先把超平面的方程写出来。<br>$$<br>w\cdot x +b&#x3D;0<br>$$</p>
+<span id="more"></span>
+
+<p>其中$w$称为权重向量。因为$w$和$x$点乘，实际上是和输入数据的特征进行加权求和。然后，我们需要把超平面计算的结果映射到0和1，感知机选择的是$sgn$函数。所以，感知机模型的数学表达式为<br>$$<br>f(x) &#x3D; sgn(w\cdot x+b)<br>$$</p>
+<p>它的参数是权重向量$w$和常量$b$。对应到超平面上，$w$就是超平面的法向量，$b$是超平面的截距。</p>
+<h1 id="3-感知机的学习策略"><a href="#3-感知机的学习策略" class="headerlink" title="3 感知机的学习策略"></a>3 感知机的学习策略</h1><p>为了对感知机进行参数最优化，我们需要找到它的损失函数。很容易想到损失函数可以用分类错误的点数来衡量，但是错误的个数是离散的，这个函数不可微分，所以用不了梯度下降。所以考虑错误分类点到超平面S的总距离，一个点到超平面的计算方法是<br>$$<br>\frac{1}{||w||}|w\cdot x_0+b|<br>$$<br>其中$||w||$ 是$w$的$L_2$范数。</p>
+<p>如果分析感知机错误分类的时候的两种情况，也就是正样本负判，负样本正判。对于第一种，$w\cdot x_i+b &gt;0$的时候，感知机本应该输出1，但错误分类时输出-1，所以$-(w\cdot x_i+b)y_i&gt;0$，对于第二种，$w\cdot x_i+b &lt;0$的时候，感知机本应该输出-1，但错误分类时输出$1$，所以$-(w\cdot x_i+b)y_i&gt;0$，所以，如果感知机错误分类一个数据，总有<br>$$<br>-y_i(w\cdot x_i+b)&gt;0<br>$$</p>
+<p>因此，拿掉距离计算公式里面的绝对值，可以得到新的距离计算公式<br>$$<br>-\frac{1}{||w||}y_i(w\cdot x_i+b)<br>$$<br>于是，我们对所有点到超平面的距离求和，得到总距离的计算公式<br>$$<br>-\frac{1}{||w||}\sum_{x_i\in M}y_i(w\cdot x_i+b)<br>$$</p>
+<p>现在不考虑权重的$L_2$范数，那么感知机的损失函数就是<br>$$<br>L(w,b) &#x3D; -\sum_{x_i\in M}y_i(w\cdot x_i+b)<br>$$</p>
+<p>这个函数意味着，如果错误分类的越少，错误分类的点离超平面越近，那么损失函数就越小。</p>
+<h1 id="4-最优化"><a href="#4-最优化" class="headerlink" title="4 最优化"></a>4 最优化</h1><p>感知机的最优化问题就是求解损失函数最小时的参数$w$和$b$。<br>$$<br>\min_{w,b}L(w,b) &#x3D; -\sum_{x_i\in M}y_i(w\cdot x_i+b)<br>$$</p>
+<p>那么，采用随机梯度下降法进行优化。首先随机一个$w_0$和$b_0$，接下来求梯度。</p>
+<p>对于法向量$w$。<br>$$<br>\nabla_w L(w,b) &#x3D; -\sum_{x_i\in M}y_ix_i<br>$$</p>
+<p>对于截距$b$<br>$$<br>\nabla_b L(w,b) &#x3D; -\sum_{x_i\in M}y_i<br>$$</p>
+<p>于是，如果随机选取一个错误分类的数据，更新的方法就是<br>$$<br>\begin{cases}<br>w^* &#x3D; w-(-\eta y_ix_i)&#x3D;w+\eta y_ix_i \<br>b^* &#x3D; b-(-\eta y_i) &#x3D; b+\eta y_i<br>\end{cases}<br>$$</p>
+<p>其中$\eta$就是学习率。</p>
+<p>所以，适用于编程实现的算法应该是</p>
+<ol>
+<li>随机一个$w_0$, $b_0$</li>
+<li>在训练集中选取一个数据$(x_i, y_i)$</li>
+<li>如果$y_i(w\cdot x_i+b)\leq 0$</li>
+<li>使用更新方法更新参数</li>
+<li>循环到step2，直到感知机不会产生错误分类的数据。</li>
+</ol>
+<p>至此，感知机的构建，学习策略和最优化算法阐述完毕。</p>
+
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
                 <source type="audio/mpeg" src="">
@@ -130,7 +132,7 @@
     </div>
     
         <div class="side">
-			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#VXLAN%E6%A6%82%E8%BF%B0%E5%8F%8A%E4%BA%A7%E7%94%9F%E5%8E%9F%E5%9B%A0"><span class="toc-number">1.</span> <span class="toc-text">VXLAN概述及产生原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#VXLAN%E7%9A%84%E5%8E%9F%E7%90%86"><span class="toc-number">2.</span> <span class="toc-text">VXLAN的原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#VXLAN%E6%8A%A5%E6%96%87%E5%B0%81%E8%A3%85%E6%A0%BC%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text">VXLAN报文封装格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E5%AE%9E%E4%BE%8B"><span class="toc-number">4.</span> <span class="toc-text">配置实例</span></a></li></ol>	
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">1 简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%9E%84%E5%BB%BA"><span class="toc-number">2.</span> <span class="toc-text">2 模型的构建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E6%84%9F%E7%9F%A5%E6%9C%BA%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AD%96%E7%95%A5"><span class="toc-number">3.</span> <span class="toc-text">3 感知机的学习策略</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%E6%9C%80%E4%BC%98%E5%8C%96"><span class="toc-number">4.</span> <span class="toc-text">4 最优化</span></a></li></ol>	
         </div>
     
 </div>

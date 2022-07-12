@@ -5,12 +5,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>移动通信基础——无线信道衰落 - Luminosity Blog</title>
+    <title>云计算基础 - 非一致性内存访问（NUMA） - Luminosity Blog</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Luminosity,"> 
-    <meta name="description" content="一、无线电波传播效应无线通信信道是一种时变信道，无线电信号通过信道时会遭受来自不同途径的衰落，接收信号总功率表现为路径损失，阴影衰落，多径效应三种效应的综合。（多径传播：电波遇到各种障碍物时会发生反,"> 
+    <meta name="description" content="三种系统架构 &amp;amp; 两种存储器共享方式从系统架构来看，目前的商用服务器大体可以分为三类：
+（1）对称多处理器结构(SMP：Symmetric Multi-Processor)
+（2）非一致内存,"> 
     <meta name="author" content="Luke"> 
     <link rel="alternative" href="atom.xml" title="Luminosity Blog" type="application/atom+xml"> 
     <link rel="icon" href="/img/ico.jpg"> 
@@ -18,16 +20,20 @@
     
     
     <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:title" content="移动通信基础——无线信道衰落 - Luminosity Blog"/>
-    <meta name="twitter:description" content="一、无线电波传播效应无线通信信道是一种时变信道，无线电信号通过信道时会遭受来自不同途径的衰落，接收信号总功率表现为路径损失，阴影衰落，多径效应三种效应的综合。（多径传播：电波遇到各种障碍物时会发生反,"/>
+    <meta name="twitter:title" content="云计算基础 - 非一致性内存访问（NUMA） - Luminosity Blog"/>
+    <meta name="twitter:description" content="三种系统架构 &amp;amp; 两种存储器共享方式从系统架构来看，目前的商用服务器大体可以分为三类：
+（1）对称多处理器结构(SMP：Symmetric Multi-Processor)
+（2）非一致内存,"/>
     
     
     
     
     <meta property="og:site_name" content="Luminosity Blog"/>
     <meta property="og:type" content="object"/>
-    <meta property="og:title" content="移动通信基础——无线信道衰落 - Luminosity Blog"/>
-    <meta property="og:description" content="一、无线电波传播效应无线通信信道是一种时变信道，无线电信号通过信道时会遭受来自不同途径的衰落，接收信号总功率表现为路径损失，阴影衰落，多径效应三种效应的综合。（多径传播：电波遇到各种障碍物时会发生反,"/>
+    <meta property="og:title" content="云计算基础 - 非一致性内存访问（NUMA） - Luminosity Blog"/>
+    <meta property="og:description" content="三种系统架构 &amp;amp; 两种存储器共享方式从系统架构来看，目前的商用服务器大体可以分为三类：
+（1）对称多处理器结构(SMP：Symmetric Multi-Processor)
+（2）非一致内存,"/>
     
 <link rel="stylesheet" href="/css/diaspora.css">
 
@@ -43,7 +49,7 @@
     <div class="bar" style="width: 0;"></div>
     <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://liyitao.cn"></a>
     <div title="播放/暂停" class="iconfont icon-play"></div>
-    <h3 class="subtitle">移动通信基础——无线信道衰落</h3>
+    <h3 class="subtitle">云计算基础 - 非一致性内存访问（NUMA）</h3>
     <div class="social">
         <div>
             <div class="share">
@@ -58,27 +64,29 @@
     <div class="section">
         <div class="article">
     <div class='main'>
-        <h1 class="title">移动通信基础——无线信道衰落</h1>
+        <h1 class="title">云计算基础 - 非一致性内存访问（NUMA）</h1>
         <div class="stuff">
-            <span>四月 26, 2022</span>
+            <span>六月 04, 2022</span>
             
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E4%BA%91%E8%AE%A1%E7%AE%97%E5%9F%BA%E7%A1%80/" rel="tag">云计算基础</a></li></ul>
+
 
         </div>
         <div class="content markdown">
-            <h1 id="一、无线电波传播效应"><a href="#一、无线电波传播效应" class="headerlink" title="一、无线电波传播效应"></a>一、无线电波传播效应</h1><p>无线通信信道是一种时变信道，无线电信号通过信道时会遭受来自不同途径的衰落，接收信号总功率表现为路径损失，阴影衰落，多径效应三种效应的综合。<br>（多径传播：电波遇到各种障碍物时会发生反射、绕射和散射现象，会对直射波形成干涉，也就是收发信机之间是有多条路径传播的。）</p>
-<p>1.路径损失：大范围内信号强度随距离变化（数百或数千个波长），应该是与距离的平方成正比，本质上表现为电波能量扩散现象。</p>
-<p>2.阴影衰落：中范围信号电平中值慢变（数百个波长），由于传播环境中的地形起伏、建筑物及其他障碍物对电波遮蔽所引起的慢衰落，信号中值出现缓慢变动，衰落深度与频率、阻碍物有关。</p>
-<p>3.多径效应（衰落）：小范围信号瞬时值快变（数十个波长），由于多径传播引起的快衰落，接收信号场强的瞬时值呈现快速变化。</p>
-<h1 id="二、无线信道衰落"><a href="#二、无线信道衰落" class="headerlink" title="二、无线信道衰落"></a>二、无线信道衰落</h1><p>根据无线电波传播效应，通常将无线信道衰落分为两类：大尺度衰落和小尺度（小尺度一般与信号波长为一个量级）衰落，尺度指时间或者距离的大小。</p>
-<h2 id="大尺度衰落："><a href="#大尺度衰落：" class="headerlink" title="大尺度衰落："></a>大尺度衰落：</h2><p>（包括传输损失、阴影衰落；大尺度衰落都是慢衰落，但是慢衰落不一定是大尺度衰落。）</p>
-<p>传输损失（路径损失）：无线电信号通过大尺度距离的信道传输时，随传输路径的增加，电波能量扩散，导致接收信号平均功率衰减，其衰减量与传输距离有关，距离越大，衰减量越多。</p>
-<p>阴影衰落：无线电信号在中尺度距离的信道中传输时，由于地形起伏或高大建筑物群等障碍物遮挡，在阻碍物的背后形成阴影区，导致接收信号平均功率随机变化。其衰落特性服从对数正态分布。</p>
-<h2 id="小尺度衰落："><a href="#小尺度衰落：" class="headerlink" title="小尺度衰落："></a>小尺度衰落：</h2><p>（由多径效应或多普勒效应引起。当传输信道小尺度(距离或时间)变化时，无线电信号在传输过程中受周围阻碍物反射、绕射和散射，其幅度或相位快速变化。）</p>
-<p>依据多径效应产生的时延扩展，将小尺度衰落划分为频率选择性衰落（信道具有恒定增益且线性相位的带宽范围小于发送信号带宽）和频率非选择性&#x2F;平坦衰落（无线信道带宽大于发送信号的带宽，且在带宽范围内有恒定增益和线性相位）；</p>
-<p>依据多普勒效应产生的多普勒（频域）扩展，将小尺度衰落划分为快衰落（信道的相干时间比发送信号的周期短，且基带信号的带宽小于多普勒扩展）和慢衰落（信道上的相干时间远远大于发送信号的周期，且基带信号的带宽远远大于多普勒扩展）。</p>
-<h1 id="三、整体理解示意图"><a href="#三、整体理解示意图" class="headerlink" title="三、整体理解示意图"></a>三、整体理解示意图</h1><div align=center> 
-<img src = 'https://s3.bmp.ovh/imgs/2022/05/09/47ced27228ee73bf.png'></img>
-<div align=left>
+            <h3 id="三种系统架构-amp-两种存储器共享方式"><a href="#三种系统架构-amp-两种存储器共享方式" class="headerlink" title="三种系统架构 &amp; 两种存储器共享方式"></a>三种系统架构 &amp; 两种存储器共享方式</h3><p>从系统架构来看，目前的商用服务器大体可以分为三类：</p>
+<p>（1）对称多处理器结构(SMP：Symmetric Multi-Processor)</p>
+<p>（2）非一致内存访问结构(NUMA：Non-Uniform Memory Access)</p>
+<p>（3）海量并行处理结构(MPP：Massive Parallel Processing)。</p>
+<p>共享存储型多处理机有两种技术</p>
+<p>（1）均匀存储器存取（Uniform-Memory-Access，简称UMA）技术</p>
+<p>（2）非均匀存储器存取（Nonuniform-Memory-Access，简称NUMA）技术</p>
+<h3 id="UMA技术"><a href="#UMA技术" class="headerlink" title="UMA技术"></a>UMA技术</h3><p>UMA是并行计算机中的共享存储架构，即物理存储器被所有处理机均匀共享，对所有存储字具有相同的存取时间。每台处理机可以有私用高速缓存,外围设备也以一定形式共享。UMA技术适合于普通需求和多用户共享时间的应用，在时序要求严格的应用中，被用作加速单一大型程序的执行率。</p>
+<h3 id="NUMA技术"><a href="#NUMA技术" class="headerlink" title="NUMA技术"></a>NUMA技术</h3><p>NUMA是用于多进程计算中的存储设计，存储读取取决于当前存储器与处理器的关联。在NUMA技术下，处理器访问本地存储器比非本地存储器（另一个处理器的本地存储器或者处理器共享的存储器）更快。</p>
+<h3 id="vNUMA"><a href="#vNUMA" class="headerlink" title="vNUMA"></a>vNUMA</h3><p>vNUMA消除了VM和操作系统之间的透明性，并将NUMA架构直通到VM的操作系统。值得一提的是，vNUMA在业内与NUMA同样盛名。对于一个广泛VM技术，VM运行的底层架构，VM的NUMA拓扑跨越多个NUMA节点。在启用了vNUMA的VM的初始功能之后，呈现给操作系统的架构是永久定义的，并且不能被修改。这个限制通常是正面的，因为改变vNUMA体系结构可能会导致操作系统的不稳定，但是如果VM通过vMotion迁移到带有不同NUMA架构的管理程序，则可能导致性能问题。值得一提的是，尽管大多数应用程序都可以利用vNUMA，但大多数VM都足够小，可以装入NUMA节点;最近对宽-VM支持或vNUMA的优化并不影响它们。</p>
+<p>因此，客户操作系统或它的应用程序如何放置进程和内存会显著影响性能。将NUMA拓扑暴露给VM的好处是，允许用户根据底层NUMA架构做出最优决策。通过假设用户操作系统将在暴露的vNUMA拓扑结构中做出最佳决策，而不是在NUMA客户机之间插入内存。</p>
+<h3 id="NUMA的重要性"><a href="#NUMA的重要性" class="headerlink" title="NUMA的重要性"></a>NUMA的重要性</h3><p>多线程应用程序需要访问CPU核心的本地内存，当它必须使用远程内存时，性能将会受到延迟的影响。访问远程内存要比本地内存慢得多。所以使用NUMA会提高性能。 现代操作系统试图在NUMA节点（本地内存+本地CPU&#x3D;NUMA节点）上调度进程，进程将使用本地NUMA节点访问核心。ESXi还使用NUMA技术为广泛的虚拟机，当虚拟核心大于8时，将虚拟核心分布在多个NUMA节点上。当机器启动时，虚拟核心将被分发到不同的NUMA节点，它将提高性能，因为虚拟核心将访问本地内存。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>首当为一个虚拟内核分配了更多的虚拟Socket，或者一个虚拟Socket分配更多的虚拟内核时，这之间的差别并不影响NUMA节点数量。虚拟Socket只会影响软件许可证而不是性能。</p>
+
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
                 <source type="audio/mpeg" src="">
@@ -117,7 +125,7 @@
     </div>
     
         <div class="side">
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%97%A0%E7%BA%BF%E7%94%B5%E6%B3%A2%E4%BC%A0%E6%92%AD%E6%95%88%E5%BA%94"><span class="toc-number">1.</span> <span class="toc-text">一、无线电波传播效应</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%97%A0%E7%BA%BF%E4%BF%A1%E9%81%93%E8%A1%B0%E8%90%BD"><span class="toc-number">2.</span> <span class="toc-text">二、无线信道衰落</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E5%B0%BA%E5%BA%A6%E8%A1%B0%E8%90%BD%EF%BC%9A"><span class="toc-number">2.1.</span> <span class="toc-text">大尺度衰落：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E5%B0%BA%E5%BA%A6%E8%A1%B0%E8%90%BD%EF%BC%9A"><span class="toc-number">2.2.</span> <span class="toc-text">小尺度衰落：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%95%B4%E4%BD%93%E7%90%86%E8%A7%A3%E7%A4%BA%E6%84%8F%E5%9B%BE"><span class="toc-number">3.</span> <span class="toc-text">三、整体理解示意图</span></a></li></ol>	
+			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E7%A7%8D%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84-amp-%E4%B8%A4%E7%A7%8D%E5%AD%98%E5%82%A8%E5%99%A8%E5%85%B1%E4%BA%AB%E6%96%B9%E5%BC%8F"><span class="toc-number">1.</span> <span class="toc-text">三种系统架构 &amp; 两种存储器共享方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UMA%E6%8A%80%E6%9C%AF"><span class="toc-number">2.</span> <span class="toc-text">UMA技术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NUMA%E6%8A%80%E6%9C%AF"><span class="toc-number">3.</span> <span class="toc-text">NUMA技术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vNUMA"><span class="toc-number">4.</span> <span class="toc-text">vNUMA</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NUMA%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7"><span class="toc-number">5.</span> <span class="toc-text">NUMA的重要性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">6.</span> <span class="toc-text">总结</span></a></li></ol>	
         </div>
     
 </div>

@@ -5,12 +5,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>感知机(Perceptron) - Luminosity Blog</title>
+    <title>通信与计算机网络基础 - 网络传播时延(propagation delay)与传输时延(transmission delay) - Luminosity Blog</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Luminosity,"> 
-    <meta name="description" content="1 简介感知机是一种简单的，用于二分类的模型。它的构建思想，就是使用一个超平面将数据分为正负两类，输出$+1$或者$-1$。感知机可以使用梯度下降的方法进行最优化，但是其优化算法只在数据线性可分的时,"> 
+    <meta name="description" content="传播时延(propagation delay)数据（更确切地说是光电信号，因为数据在传输的时候，是隐藏在光电信号）从网络一端经过介质传播到另一端的时间。
+决定因素这主要取决于光电信号在介质中传播的速,"> 
     <meta name="author" content="Luke"> 
     <link rel="alternative" href="atom.xml" title="Luminosity Blog" type="application/atom+xml"> 
     <link rel="icon" href="/img/ico.jpg"> 
@@ -18,16 +19,18 @@
     
     
     <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:title" content="感知机(Perceptron) - Luminosity Blog"/>
-    <meta name="twitter:description" content="1 简介感知机是一种简单的，用于二分类的模型。它的构建思想，就是使用一个超平面将数据分为正负两类，输出$+1$或者$-1$。感知机可以使用梯度下降的方法进行最优化，但是其优化算法只在数据线性可分的时,"/>
+    <meta name="twitter:title" content="通信与计算机网络基础 - 网络传播时延(propagation delay)与传输时延(transmission delay) - Luminosity Blog"/>
+    <meta name="twitter:description" content="传播时延(propagation delay)数据（更确切地说是光电信号，因为数据在传输的时候，是隐藏在光电信号）从网络一端经过介质传播到另一端的时间。
+决定因素这主要取决于光电信号在介质中传播的速,"/>
     
     
     
     
     <meta property="og:site_name" content="Luminosity Blog"/>
     <meta property="og:type" content="object"/>
-    <meta property="og:title" content="感知机(Perceptron) - Luminosity Blog"/>
-    <meta property="og:description" content="1 简介感知机是一种简单的，用于二分类的模型。它的构建思想，就是使用一个超平面将数据分为正负两类，输出$+1$或者$-1$。感知机可以使用梯度下降的方法进行最优化，但是其优化算法只在数据线性可分的时,"/>
+    <meta property="og:title" content="通信与计算机网络基础 - 网络传播时延(propagation delay)与传输时延(transmission delay) - Luminosity Blog"/>
+    <meta property="og:description" content="传播时延(propagation delay)数据（更确切地说是光电信号，因为数据在传输的时候，是隐藏在光电信号）从网络一端经过介质传播到另一端的时间。
+决定因素这主要取决于光电信号在介质中传播的速,"/>
     
 <link rel="stylesheet" href="/css/diaspora.css">
 
@@ -43,7 +46,7 @@
     <div class="bar" style="width: 0;"></div>
     <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://liyitao.cn"></a>
     <div title="播放/暂停" class="iconfont icon-play"></div>
-    <h3 class="subtitle">感知机(Perceptron)</h3>
+    <h3 class="subtitle">通信与计算机网络基础 - 网络传播时延(propagation delay)与传输时延(transmission delay)</h3>
     <div class="social">
         <div>
             <div class="share">
@@ -58,41 +61,24 @@
     <div class="section">
         <div class="article">
     <div class='main'>
-        <h1 class="title">感知机(Perceptron)</h1>
+        <h1 class="title">通信与计算机网络基础 - 网络传播时延(propagation delay)与传输时延(transmission delay)</h1>
         <div class="stuff">
-            <span>三月 07, 2022</span>
+            <span>四月 21, 2022</span>
             
-  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag">机器学习</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0/" rel="tag">统计学习</a></li></ul>
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E9%80%9A%E4%BF%A1%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/" rel="tag">通信与计算机网络基础</a></li></ul>
 
 
         </div>
         <div class="content markdown">
-            <h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1 简介"></a>1 简介</h1><p>感知机是一种简单的，用于二分类的模型。它的构建思想，就是使用一个超平面将数据分为正负两类，输出$+1$或者$-1$。感知机可以使用梯度下降的方法进行最优化，但是其优化算法只在数据线性可分的时候收敛。感知机是Rosenblatt在1957年提出的。</p>
-<h1 id="2-模型的构建"><a href="#2-模型的构建" class="headerlink" title="2 模型的构建"></a>2 模型的构建</h1><p>由上述构建思想可知，感知机要将一个特征空间为$X \subseteq R^n$的数据映射到输出空间$Y&#x3D;{+1,-1}$。使用$x\in X$表示训练数据的特征向量，$y\in Y$表示输出的值。之前提到过，感知机使用超平面来区分正类和负类，那么就可以先把超平面的方程写出来。<br>$$<br>w\cdot x +b&#x3D;0<br>$$</p>
-<span id="more"></span>
-
-<p>其中$w$称为权重向量。因为$w$和$x$点乘，实际上是和输入数据的特征进行加权求和。然后，我们需要把超平面计算的结果映射到0和1，感知机选择的是$sgn$函数。所以，感知机模型的数学表达式为<br>$$<br>f(x) &#x3D; sgn(w\cdot x+b)<br>$$</p>
-<p>它的参数是权重向量$w$和常量$b$。对应到超平面上，$w$就是超平面的法向量，$b$是超平面的截距。</p>
-<h1 id="3-感知机的学习策略"><a href="#3-感知机的学习策略" class="headerlink" title="3 感知机的学习策略"></a>3 感知机的学习策略</h1><p>为了对感知机进行参数最优化，我们需要找到它的损失函数。很容易想到损失函数可以用分类错误的点数来衡量，但是错误的个数是离散的，这个函数不可微分，所以用不了梯度下降。所以考虑错误分类点到超平面S的总距离，一个点到超平面的计算方法是<br>$$<br>\frac{1}{||w||}|w\cdot x_0+b|<br>$$<br>其中$||w||$ 是$w$的$L_2$范数。</p>
-<p>如果分析感知机错误分类的时候的两种情况，也就是正样本负判，负样本正判。对于第一种，$w\cdot x_i+b &gt;0$的时候，感知机本应该输出1，但错误分类时输出-1，所以$-(w\cdot x_i+b)y_i&gt;0$，对于第二种，$w\cdot x_i+b &lt;0$的时候，感知机本应该输出-1，但错误分类时输出$1$，所以$-(w\cdot x_i+b)y_i&gt;0$，所以，如果感知机错误分类一个数据，总有<br>$$<br>-y_i(w\cdot x_i+b)&gt;0<br>$$</p>
-<p>因此，拿掉距离计算公式里面的绝对值，可以得到新的距离计算公式<br>$$<br>-\frac{1}{||w||}y_i(w\cdot x_i+b)<br>$$<br>于是，我们对所有点到超平面的距离求和，得到总距离的计算公式<br>$$<br>-\frac{1}{||w||}\sum_{x_i\in M}y_i(w\cdot x_i+b)<br>$$</p>
-<p>现在不考虑权重的$L_2$范数，那么感知机的损失函数就是<br>$$<br>L(w,b) &#x3D; -\sum_{x_i\in M}y_i(w\cdot x_i+b)<br>$$</p>
-<p>这个函数意味着，如果错误分类的越少，错误分类的点离超平面越近，那么损失函数就越小。</p>
-<h1 id="4-最优化"><a href="#4-最优化" class="headerlink" title="4 最优化"></a>4 最优化</h1><p>感知机的最优化问题就是求解损失函数最小时的参数$w$和$b$。<br>$$<br>\min_{w,b}L(w,b) &#x3D; -\sum_{x_i\in M}y_i(w\cdot x_i+b)<br>$$</p>
-<p>那么，采用随机梯度下降法进行优化。首先随机一个$w_0$和$b_0$，接下来求梯度。</p>
-<p>对于法向量$w$。<br>$$<br>\nabla_w L(w,b) &#x3D; -\sum_{x_i\in M}y_ix_i<br>$$</p>
-<p>对于截距$b$<br>$$<br>\nabla_b L(w,b) &#x3D; -\sum_{x_i\in M}y_i<br>$$</p>
-<p>于是，如果随机选取一个错误分类的数据，更新的方法就是<br>$$<br>\begin{cases}<br>w^* &#x3D; w-(-\eta y_ix_i)&#x3D;w+\eta y_ix_i \<br>b^* &#x3D; b-(-\eta y_i) &#x3D; b+\eta y_i<br>\end{cases}<br>$$</p>
-<p>其中$\eta$就是学习率。</p>
-<p>所以，适用于编程实现的算法应该是</p>
-<ol>
-<li>随机一个$w_0$, $b_0$</li>
-<li>在训练集中选取一个数据$(x_i, y_i)$</li>
-<li>如果$y_i(w\cdot x_i+b)\leq 0$</li>
-<li>使用更新方法更新参数</li>
-<li>循环到step2，直到感知机不会产生错误分类的数据。</li>
-</ol>
-<p>至此，感知机的构建，学习策略和最优化算法阐述完毕。</p>
+            <h1 id="传播时延-propagation-delay"><a href="#传播时延-propagation-delay" class="headerlink" title="传播时延(propagation delay)"></a>传播时延(propagation delay)</h1><p>数据（更确切地说是光电信号，因为数据在传输的时候，是隐藏在光电信号）从网络一端经过介质传播到另一端的时间。</p>
+<h2 id="决定因素"><a href="#决定因素" class="headerlink" title="决定因素"></a>决定因素</h2><p>这主要取决于光电信号在介质中传播的速度，还有两端直接介质的长度。</p>
+<h1 id="传输时延-transmission-delay"><a href="#传输时延-transmission-delay" class="headerlink" title="传输时延(transmission delay)"></a>传输时延(transmission delay)</h1><p>方便记忆的话，把传输时延改称为发射时延可能会更清晰一点。《计算机网络》（第七版，谢希仁编著）这本书上翻译为传输时延，对于汉语来说容易有歧义，后文也专门加了注解可以理解为发射。</p>
+<h2 id="决定因素-1"><a href="#决定因素-1" class="headerlink" title="决定因素"></a>决定因素</h2><p>其实它指的是数据从开始发送，到发送完成需要的时间。这其实和信道传输速率有很大关系。注意这里说速率就没有歧义，说速度就有歧义。</p>
+<h1 id="用于简易理解两者区分的类比"><a href="#用于简易理解两者区分的类比" class="headerlink" title="用于简易理解两者区分的类比"></a>用于简易理解两者区分的类比</h1><p>传输时延也称发送时延。</p>
+<p>可以用公交车的例子来打比方。传输时延好比公交车开到站台前，站台上等候该公交的乘客从第一个上公交到最后一个上公交结束所花的时间便是传输时延；而公交车载着乘客从这一站开到下一站的路上所花的时间就是传播时延。</p>
+<p>而在网络结构中，我们把数据发送到传播媒介上的过程便是乘客上车的过程；而数据通过电磁信号或光信号的形式在传播媒介上进行传播所花的时间便是传播时延。</p>
+<h1 id="其他时延"><a href="#其他时延" class="headerlink" title="其他时延"></a>其他时延</h1><h2 id="排队时延"><a href="#排队时延" class="headerlink" title="排队时延"></a>排队时延</h2><p>分组在经过网络传输时，要经过许多的路由器。在进入路由器后要先在输入队列中排队等待处理。在路由器确定了转发接口后，还要在输出队列中排队等待转发</p>
+<h2 id="节点处理时延"><a href="#节点处理时延" class="headerlink" title="节点处理时延"></a>节点处理时延</h2><p>节点进行报文存储转发处理（比如解析报文，查找路由表等）所产生的时间</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
@@ -132,7 +118,7 @@
     </div>
     
         <div class="side">
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">1 简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%9E%84%E5%BB%BA"><span class="toc-number">2.</span> <span class="toc-text">2 模型的构建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E6%84%9F%E7%9F%A5%E6%9C%BA%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AD%96%E7%95%A5"><span class="toc-number">3.</span> <span class="toc-text">3 感知机的学习策略</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%E6%9C%80%E4%BC%98%E5%8C%96"><span class="toc-number">4.</span> <span class="toc-text">4 最优化</span></a></li></ol>	
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BC%A0%E6%92%AD%E6%97%B6%E5%BB%B6-propagation-delay"><span class="toc-number">1.</span> <span class="toc-text">传播时延(propagation delay)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%B3%E5%AE%9A%E5%9B%A0%E7%B4%A0"><span class="toc-number">1.1.</span> <span class="toc-text">决定因素</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BC%A0%E8%BE%93%E6%97%B6%E5%BB%B6-transmission-delay"><span class="toc-number">2.</span> <span class="toc-text">传输时延(transmission delay)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%B3%E5%AE%9A%E5%9B%A0%E7%B4%A0-1"><span class="toc-number">2.1.</span> <span class="toc-text">决定因素</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E4%BA%8E%E7%AE%80%E6%98%93%E7%90%86%E8%A7%A3%E4%B8%A4%E8%80%85%E5%8C%BA%E5%88%86%E7%9A%84%E7%B1%BB%E6%AF%94"><span class="toc-number">3.</span> <span class="toc-text">用于简易理解两者区分的类比</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E6%97%B6%E5%BB%B6"><span class="toc-number">4.</span> <span class="toc-text">其他时延</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%92%E9%98%9F%E6%97%B6%E5%BB%B6"><span class="toc-number">4.1.</span> <span class="toc-text">排队时延</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8A%82%E7%82%B9%E5%A4%84%E7%90%86%E6%97%B6%E5%BB%B6"><span class="toc-number">4.2.</span> <span class="toc-text">节点处理时延</span></a></li></ol></li></ol>	
         </div>
     
 </div>
