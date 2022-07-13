@@ -161,6 +161,10 @@
     <title>云计算基础框架</title>
     <url>/2022/07/12/%E4%BA%91%E8%AE%A1%E7%AE%97%E5%9F%BA%E7%A1%80%E6%A1%86%E6%9E%B6/</url>
     <content><![CDATA[<p>本文为仅供参考的学习框架，需配合具体内容源使用。</p>
+<div align=center> 
+<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/e0394c640b2b7011.png'></img>
+<div align=left>
+
 <h1 id="一、云计算的基本概念"><a href="#一、云计算的基本概念" class="headerlink" title="一、云计算的基本概念"></a>一、云计算的基本概念</h1><h2 id="1-云计算的定义"><a href="#1-云计算的定义" class="headerlink" title="1.云计算的定义"></a>1.云计算的定义</h2><h2 id="2-云计算的分类"><a href="#2-云计算的分类" class="headerlink" title="2.云计算的分类"></a>2.云计算的分类</h2><h3 id="IaaS"><a href="#IaaS" class="headerlink" title="IaaS"></a>IaaS</h3><h3 id="PaaS"><a href="#PaaS" class="headerlink" title="PaaS"></a>PaaS</h3><h3 id="SaaS"><a href="#SaaS" class="headerlink" title="SaaS"></a>SaaS</h3><h2 id="3-云计算的部署模式"><a href="#3-云计算的部署模式" class="headerlink" title="3.云计算的部署模式"></a>3.云计算的部署模式</h2><h3 id="公有云"><a href="#公有云" class="headerlink" title="公有云"></a>公有云</h3><h3 id="私有云"><a href="#私有云" class="headerlink" title="私有云"></a>私有云</h3><h3 id="混合云"><a href="#混合云" class="headerlink" title="混合云"></a>混合云</h3><h3 id="分布式云"><a href="#分布式云" class="headerlink" title="分布式云"></a>分布式云</h3><h2 id="4-云计算的组成要素"><a href="#4-云计算的组成要素" class="headerlink" title="4.云计算的组成要素"></a>4.云计算的组成要素</h2><h1 id="二、计算基础"><a href="#二、计算基础" class="headerlink" title="二、计算基础"></a>二、计算基础</h1><h2 id="1-服务器"><a href="#1-服务器" class="headerlink" title="1.服务器"></a>1.服务器</h2><h3 id="CPU"><a href="#CPU" class="headerlink" title="CPU"></a>CPU</h3><h3 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h3><h3 id="存储（文件系统、RAID）"><a href="#存储（文件系统、RAID）" class="headerlink" title="存储（文件系统、RAID）"></a>存储（文件系统、RAID）</h3><h2 id="2-操作系统"><a href="#2-操作系统" class="headerlink" title="2.操作系统"></a>2.操作系统</h2><h1 id="三、存储基础"><a href="#三、存储基础" class="headerlink" title="三、存储基础"></a>三、存储基础</h1><h2 id="1-存储的分类（块存储、文件存储、对象存储）"><a href="#1-存储的分类（块存储、文件存储、对象存储）" class="headerlink" title="1.存储的分类（块存储、文件存储、对象存储）"></a>1.存储的分类（块存储、文件存储、对象存储）</h2><h2 id="2-存储的拓展（DAS、FC-SAN、IP-SAN、NAS）"><a href="#2-存储的拓展（DAS、FC-SAN、IP-SAN、NAS）" class="headerlink" title="2.存储的拓展（DAS、FC-SAN、IP-SAN、NAS）"></a>2.存储的拓展（DAS、FC-SAN、IP-SAN、NAS）</h2><h3 id="关系数据库-事务四大特征"><a href="#关系数据库-事务四大特征" class="headerlink" title="关系数据库-事务四大特征"></a>关系数据库-事务四大特征</h3><h2 id="3-服务器虚拟化"><a href="#3-服务器虚拟化" class="headerlink" title="3.服务器虚拟化"></a>3.服务器虚拟化</h2><h3 id="CPU虚拟化（实现虚拟机指令到硬件CPU的传递）"><a href="#CPU虚拟化（实现虚拟机指令到硬件CPU的传递）" class="headerlink" title="CPU虚拟化（实现虚拟机指令到硬件CPU的传递）"></a>CPU虚拟化（实现虚拟机指令到硬件CPU的传递）</h3><p>利用二进制翻译的全虚拟化<br>半虚拟化<br>硬件辅助虚拟化</p>
 <h3 id="内存虚拟化（实现虚拟机对硬件内存进行操作）"><a href="#内存虚拟化（实现虚拟机对硬件内存进行操作）" class="headerlink" title="内存虚拟化（实现虚拟机对硬件内存进行操作）"></a>内存虚拟化（实现虚拟机对硬件内存进行操作）</h3><p>全虚拟化<br>硬件辅助虚拟化</p>
 <h3 id="CPU虚拟化（实现虚拟机对硬件I-x2F-O设备进行操作）"><a href="#CPU虚拟化（实现虚拟机对硬件I-x2F-O设备进行操作）" class="headerlink" title="CPU虚拟化（实现虚拟机对硬件I&#x2F;O设备进行操作）"></a>CPU虚拟化（实现虚拟机对硬件I&#x2F;O设备进行操作）</h3><p>全虚拟化<br>半虚拟化<br>Pass-through（直通）<br>硬件辅助虚拟化</p>
@@ -169,7 +173,63 @@
 <h2 id="2-网络功能虚拟化（NFV）"><a href="#2-网络功能虚拟化（NFV）" class="headerlink" title="2.网络功能虚拟化（NFV）"></a>2.网络功能虚拟化（NFV）</h2><p>核心：将网络功能从承载这些功能的硬件中抽离出来，最终实现：统一通用硬件平台+业务逻辑软件 的开放架构</p>
 <h2 id="3-软件定义网络（SDN）"><a href="#3-软件定义网络（SDN）" class="headerlink" title="3.软件定义网络（SDN）"></a>3.软件定义网络（SDN）</h2><p>核心：将网络设备的控制平面与数据平面分离，实现网路流量的统一、高效控制</p>
 <h2 id="4-软件定义存储（SDS）（分布式存储）"><a href="#4-软件定义存储（SDS）（分布式存储）" class="headerlink" title="4.软件定义存储（SDS）（分布式存储）"></a>4.软件定义存储（SDS）（分布式存储）</h2><p>核心：采用通用x86服务器，分布式架构</p>
-<h2 id="5-如何提高存储的可靠性"><a href="#5-如何提高存储的可靠性" class="headerlink" title="5.如何提高存储的可靠性"></a>5.如何提高存储的可靠性</h2><h3 id="多副本存储（脑裂、仲裁机制）"><a href="#多副本存储（脑裂、仲裁机制）" class="headerlink" title="多副本存储（脑裂、仲裁机制）"></a>多副本存储（脑裂、仲裁机制）</h3><h3 id="纠删码存储"><a href="#纠删码存储" class="headerlink" title="纠删码存储"></a>纠删码存储</h3><h2 id="6-如何提高存储的性能"><a href="#6-如何提高存储的性能" class="headerlink" title="6.如何提高存储的性能"></a>6.如何提高存储的性能</h2><h3 id="分布式存储架构"><a href="#分布式存储架构" class="headerlink" title="分布式存储架构"></a>分布式存储架构</h3><h3 id="条带化-amp-I-x2F-O本地化技术"><a href="#条带化-amp-I-x2F-O本地化技术" class="headerlink" title="条带化&amp;I&#x2F;O本地化技术"></a>条带化&amp;I&#x2F;O本地化技术</h3><h3 id="存储分层技术（SSD-HDD，根据数据使用的频次）"><a href="#存储分层技术（SSD-HDD，根据数据使用的频次）" class="headerlink" title="存储分层技术（SSD+HDD，根据数据使用的频次）"></a>存储分层技术（SSD+HDD，根据数据使用的频次）</h3><h1 id="五、三节点超融合组网"><a href="#五、三节点超融合组网" class="headerlink" title="五、三节点超融合组网"></a>五、三节点超融合组网</h1>]]></content>
+<h2 id="5-如何提高存储的可靠性"><a href="#5-如何提高存储的可靠性" class="headerlink" title="5.如何提高存储的可靠性"></a>5.如何提高存储的可靠性</h2><h3 id="多副本存储（脑裂、仲裁机制）"><a href="#多副本存储（脑裂、仲裁机制）" class="headerlink" title="多副本存储（脑裂、仲裁机制）"></a>多副本存储（脑裂、仲裁机制）</h3><h3 id="纠删码存储"><a href="#纠删码存储" class="headerlink" title="纠删码存储"></a>纠删码存储</h3><h2 id="6-如何提高存储的性能"><a href="#6-如何提高存储的性能" class="headerlink" title="6.如何提高存储的性能"></a>6.如何提高存储的性能</h2><h3 id="分布式存储架构"><a href="#分布式存储架构" class="headerlink" title="分布式存储架构"></a>分布式存储架构</h3><h3 id="条带化-amp-I-x2F-O本地化技术"><a href="#条带化-amp-I-x2F-O本地化技术" class="headerlink" title="条带化&amp;I&#x2F;O本地化技术"></a>条带化&amp;I&#x2F;O本地化技术</h3><h3 id="存储分层技术（SSD-HDD，根据数据使用的频次）"><a href="#存储分层技术（SSD-HDD，根据数据使用的频次）" class="headerlink" title="存储分层技术（SSD+HDD，根据数据使用的频次）"></a>存储分层技术（SSD+HDD，根据数据使用的频次）</h3><h1 id="五、三节点超融合组网"><a href="#五、三节点超融合组网" class="headerlink" title="五、三节点超融合组网"></a>五、三节点超融合组网</h1><h1 id="六、应用程序"><a href="#六、应用程序" class="headerlink" title="六、应用程序"></a>六、应用程序</h1><h2 id="1、微服务"><a href="#1、微服务" class="headerlink" title="1、微服务"></a>1、微服务</h2><p>软件系统架构的演变：<br>集中式架构 –&gt; 垂直拆分 –&gt; 分布式服务 –&gt; 面向服务架构（SOA） –&gt; 微服务架构</p>
+<h2 id="2、容器"><a href="#2、容器" class="headerlink" title="2、容器"></a>2、容器</h2><div align=center> 
+<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/fff892c8171ab948.png'></img>
+<div align=left>
+
+<h2 id="3、K8S（Kubernetes）"><a href="#3、K8S（Kubernetes）" class="headerlink" title="3、K8S（Kubernetes）"></a>3、K8S（Kubernetes）</h2><p>用于对容器的生命周期进行管理（实现容器的高可用、监控告警）<br>master节点：负责管理和控制<br>node节点：负责工作负载</p>
+<p>容器、Docker、K8S和PaaS平台的关系如下：</p>
+<div align=center> 
+<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/a45d42037ffd104f.png'></img>
+<div align=left>
+
+<h2 id="4、DevOps"><a href="#4、DevOps" class="headerlink" title="4、DevOps"></a>4、DevOps</h2><div align=center> 
+<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/8b74d0617ff02f9c.png'></img>
+<div align=left>
+
+<p>一个理想的软件开发流水线：</p>
+<div align=center> 
+<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/270bc3888ecc5670.png'></img>
+<div align=left>
+
+<h2 id="5、云原生"><a href="#5、云原生" class="headerlink" title="5、云原生"></a>5、云原生</h2><p>云原生：应用原生被设计为在云以上以最佳方式运行，充分发挥云的优势<br>Core：让应用关注业务需求的实现，而把非业务需求的实现（比如各自计算资源）下沉到云。（基础设施的中间件）</p>
+<div align=center> 
+<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/1a2784827492b23a.png'></img>
+<div align=left>
+
+<p>拓展问题：容器化和云原生下的负载均衡<br>K8S通过开源组件实现的负载均衡效果不好 –&gt; 使用公司的cnAD</p>
+<h2 id="6、大数据"><a href="#6、大数据" class="headerlink" title="6、大数据"></a>6、大数据</h2><p>什么是大数据？<br>4V<br>volume：数据量巨大<br>variety：种类和来源多样化（目前企业数据的80%以上为非结构化数据）<br>velocity：分析处理速度快<br>value：价值密度低，商业价值高</p>
+<p>大数据使用流程：</p>
+<div align=center> 
+<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/f1115ad9bfb7b968.png'></img>
+<div align=left>
+
+<p>大数据应用挑战：<br>1.技术门槛高<br>2.交付成本高（定制需求多，且部署周期长，后期维护管理成本高）<br>3.开源版本难以支撑复杂业务</p>
+<h2 id="7、云管平台"><a href="#7、云管平台" class="headerlink" title="7、云管平台"></a>7、云管平台</h2><p>业务发展 –&gt; 稳态业务与敏态业务的分离（敏态业务上线公有云）–&gt; 如何实现私有及公有数据中心对外业务的统一管理–&gt; 云管（CMP）</p>
+<div align=center> 
+<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/7f975a3a6005cdd6.png'></img>
+<div align=left>
+
+<h2 id="8、容灾备份"><a href="#8、容灾备份" class="headerlink" title="8、容灾备份"></a>8、容灾备份</h2><p>灾备：容灾与备份</p>
+<div align=center> 
+<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/ac42eec899e4d2d5.png'></img>
+<div align=left>
+
+<h3 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h3><p>数据中心容灾相关概念——RPO和RTO</p>
+<div align=center> 
+<img src = 'https://i.bmp.ovh/imgs/2022/07/13/5afd6e617e31e00e.png'></img>
+<div align=left>
+
+<p>常见业务保护方式的RPO和RTO</p>
+<div align=center> 
+<img src = 'https://i.bmp.ovh/imgs/2022/07/13/f64ae9916a904d64.png'></img>
+<div align=left>
+
+<p>快照技术：<br>COW<br>ROW</p>
+<p>持续性数据保护CDP：<br>Core: 记录应用数据变化时的日志，在系统故障时根据数据变化日志进行恢复。RPO约为0，RTO为10min到30min。</p>
+<h3 id="容灾"><a href="#容灾" class="headerlink" title="容灾"></a>容灾</h3><p>主备容灾数据中心解决方案：异地。平时只开主数据中心。RPO秒级，RTO分钟级。<br>双活数据中心解决方案：本地，裸光纤直连。两个中心同时对外提供服务。RPO&#x3D;0，RTO&#x3D;0。<br>数据中心“两地三中心”解决方案：上述两种方案的结合。</p>
+]]></content>
       <categories>
         <category>云计算</category>
       </categories>
