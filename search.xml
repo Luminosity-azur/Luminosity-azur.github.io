@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>云计算基础 - 总拥有成本（TCO）</title>
-    <url>/2022/07/10/%E4%BA%91%E8%AE%A1%E7%AE%97%E5%9F%BA%E7%A1%80%20-%20%E6%80%BB%E6%8B%A5%E6%9C%89%E6%88%90%E6%9C%AC%EF%BC%88TCO%EF%BC%89/</url>
-    <content><![CDATA[<h3 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h3><p>Total Cost of Ownership —— 总拥有成本</p>
-<p>TCO是一种公司经常采用的技术评价标准，它的核心思想是在一定时间范围内所拥有的包括置业成本（acquisition cost）和每年总成本在内的总体成本。在某些情况下，这一总体成本是一个为获得可比较的现行开支而对3到5年时间范围内的成本进行平均的值。</p>
-<p>总拥有成本（TCO）是公司内保有和维持所有软件所花费的成本</p>
-<h3 id="二、引言"><a href="#二、引言" class="headerlink" title="二、引言"></a>二、引言</h3><p>几乎所有的机构或企业在信息化的过程中都离不开成本的预算，尤其是在IT项目投资时，更是需要一种科学、合理的价值评估方法来晚场。本文的主题——总拥有成本TCO就是这样一种在完成这一任务的过程中建立起的一个经济评估机制。</p>
-<h3 id="三、什么是总拥有成本TCO"><a href="#三、什么是总拥有成本TCO" class="headerlink" title="三、什么是总拥有成本TCO"></a>三、什么是总拥有成本TCO</h3><p>关于总拥有成本TCO (Total cost of ownership)的概念，真实仁者见仁，智者见智，没有统一的定论。这里我们列举出比较有代表性的Gartner的定义：<br>权威机构Gartner对总拥有成本下的定义是：TCO是一种在整个企业范围内长期考虑企业整个成本的一种全局性的方法。它是定性分析机构的信息系统的效能的一种定量化的手段，是一种有助于机构全面彻底分析、评价、管理和降低自己的成本的一套方法和建模工具，从而提高整个IT投资的价值，使IT更好地支持业务。<br>TCO is the holistic view of costs across enterprise boundaries over time。TCO is a quantitative means for understanding the qualitative performance of the IS organization。TCO is a comprehensive set of methodologies, models and tools to help IS organizations better:<br>–Measure costs<br>–Manage costs<br>–Reduce costs<br>–Improve overall value of IT investments<br>–Align IT support to the business mission<br>总拥有成本TCO常常作为机构IT战略的一个重要组成部分，是一种公司经常采用的技术评价标准，它的核心是评估在一定时间范围内企业所拥有的包括置业成本（acquisition cost）和每年总成本在内的总体成本。与简单的投资回报率（ROI）的计算相比，总体拥有成本的计算往往侧重于长期深入的分析，所以它成为存储经济评估最有效的工具之一。在某些情况下，这一总体成本是一个为获得可比较的现行开支而对3到5年时间范围内的成本进行平均的值。具体来说，我们可以从以下具体的方面来评估TCO的值：</p>
-<h3 id="四、总拥有成本TCO的核算"><a href="#四、总拥有成本TCO的核算" class="headerlink" title="四、总拥有成本TCO的核算"></a>四、总拥有成本TCO的核算</h3><p>总体拥有成本核算一般由两大部份构成：技术和业务。技术成本包括与硬件、软件（含维护和升级）、安装、培训的成本，以及操作、支持和咨询等人力开支。<br>业务成本涉及到可用性、性能和恢复相关的财务问题。可用性又包括因可用性的提高而带来的收益和因数据不可用而付出的代价两个方面。因可用性的提高而带来的商业收益包括与解决方案相关的收益、节约的人力资源成本和新投资带来的生产率的提高等部分。性能因素就是评价性能对数据可用性的贡献。对性能改进的计算方法不是计算一次性收益，而是要计算随着时间推移不断提高的收益。<br>恢复成本指的是一旦存储设施出现故障，恢复到正常运行所花费的时间和资金。它还包含由此产生商业价值的损失和对生产率的影响，以及其他一些杂项开支。<br>通过总体拥有成本来考量IT费用，对于各种规模大小的公司都非常有用。 这意味着我们不单看到了终端用户的硬件成本，而且考虑了所有即将带来的相关的成本：<br>附加的资产成本 - 软件、IT支持软件和网络架构。<br>技术支持成本 - 硬件和软件布署、技术支持人员、系统维护。<br>管理成本 - 财务、供应商管理、用户培训、资产管理。<br>终端用户操作成本 - 宕机成本，用户相互支持和昂贵的IT技术人员支持。</p>
-<h3 id="五、TCO的优点和缺点"><a href="#五、TCO的优点和缺点" class="headerlink" title="五、TCO的优点和缺点"></a>五、TCO的优点和缺点</h3><h4 id="1、TCO的优点——利于进行预算"><a href="#1、TCO的优点——利于进行预算" class="headerlink" title="1、TCO的优点——利于进行预算"></a>1、TCO的优点——利于进行预算</h4><p>TCO 的突出优点是：在某个项目购进的初期人们对其将来可能要投入的成本尚未清楚的时候，提供了一种强有力的成本估算方法。然而, 由于这种估算方法只看重成本，所以对于完全仰赖TCO 而言，将使这样的公司最终采取将开支减到最少的策略，而不再考虑如何把最大限度获得回报的策略。为此，这些公司可能购买成本最低廉的应用软件，而很少选择那些能对公司的最低要求产生最大影响的应用软件。<br>在绝大多数情形下, 计算总所有成本是一个需要持续努力的过程，它既需要考虑技术方面的因素，又要能兼顾到非技术方面的因素。想要对相关的应用软件的持续成本有个完全的了解，最好通过至少 3 年左右的时间范围来计算TCO。包括软件和硬件成本在内的各项成本加上真正上马该软件前准备工作中的咨询和有关支持成本都是在计算TCO时要考虑在内的。而真正上马该软件后，随后几年的维护、升级成本以及培训用户和IT支持方面的成本也是必须要考虑的。<br>每年的年度 TCO 数字是一个关于现行成本状况的卓越的指示器，同时又能被很好地用作达到预算目标的并且在以预算为目的项目上被很好地使用。与其他类似的方法相比，在一段时间范围内的平均 TCO 值提供了一个比较合理的标准。但是，平均 TCO 不能洞察成本的时机情况。我们发现，低投入成本高投入维护的产品没有高投入成本低投入维护的产品更能吸引人，但是通过一段时间的分析，这样两类产品在TCO方面是类似的，几乎没什么差别。</p>
-<h4 id="2、TCO的缺点"><a href="#2、TCO的缺点" class="headerlink" title="2、TCO的缺点"></a>2、TCO的缺点</h4><p>总所有成本存在的问题是：由于它是被孤立使用的，所以提供的仅仅是一种有关某一个应用软件的成本的非常狭窄的方法。TCO 完全地不考虑利润，而你关心的不只是选择最便宜的应用软件，更重要的是你要考虑选择最能给公司带来利润或回报的应用软件。举例来说，你可能可以让一个兼职的实习医师用微软的Front Page建一个网站, 但是这样做你最终能得到最大的利润回报吗？<br>同样道理，TCO不能帮你优化项目，因为建立在最低成本基础上的优化将意谓着从不在项目中投资。相反，优化要求公司要在成本、收益和投资风险中衡量各种因素后再最终决定究竟如何开始迈出第一步。<br>在财政方面没有腐败等纪律问题，每家公司应该对他们做的每一项技术投资的持续费用的有一个清楚认识。因为TCO能很容易的得出成本费用并且在基于较少的开支上作决定的方面有一个具体的数字，所以许多公司和分析家已经观注TCO、把它作为一种重要具体的标准。然而,技术能对底线有很大的影响。看着全部费用和利益已超出的TCO情况，它能使你的确定你虽然采用不是最廉宜的解决方案 , 但对你的公司是最好解决。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>通过上述分析可以看出，TCO有它的优势，也存在不足之处。TCO不涉及任何财务纪律方面的事，而且通过TCO，每家公司都可以对自己投资在每一项技术的现行成本了如指掌。正是因为TCO能为企业提供看得见摸得着的数字，所以很多公司都把它作为一项基本的技术评价准则。有了TCO，企业就能很容易地看到成本的流转情况，并在尽可能低的支出基础上进行决策。不过，我们必须清楚，技术对企业的最低要求有着显著的影响，我们不能局限于TCO方法，要全面考虑，兼顾成本和收益等各种因素，以确保所选择的解决方案不一定是最便宜的，但一定要是最好的。</p>
-]]></content>
+    <title>云计算基础 - VXLAN</title>
+    <url>/2022/06/12/%E4%BA%91%E8%AE%A1%E7%AE%97%E5%9F%BA%E7%A1%80%20-%20VXLAN/</url>
+    <content><![CDATA[<h3 id="VXLAN概述及产生原因"><a href="#VXLAN概述及产生原因" class="headerlink" title="VXLAN概述及产生原因"></a>VXLAN概述及产生原因</h3><p>1、虚拟机规模收到网络设备表现规格的限制</p>
+<p>服务器虚拟化导致虚拟机的数量呈现几何级增加，伴随而来的是虚拟机网卡MAC地址数量的剧增。原接入侧的二层设备的MAC地址表规格不能满足快速增长的虚拟机数量。</p>
+<p>VXLAN的解决方式：</p>
+<p>VXLAN将网络管理员规划的同一区域内的虚拟机发出的报文封装成新的UDP报文，并使用物理网络的IP和MAC地址作为外层头，这样报文对网络中的其他设备只表现为封装后的参数。</p>
+<p>2、网络的隔离能力有限</p>
+<p>对于现今公有云或者大型虚拟化计算服务器需要上万甚至更多租户的情况，现有的VLAN数量不足以满足这个需求</p>
+<p>VXLAN的解决方式：</p>
+<p>VXLAN引入了类似VLAN ID的用户标识，成为VXLAN网络标识VNI （VXLAN Network Idendifier）,由24bit组成，因此最多可支持16M的VXLAN段。</p>
+<p>3、虚拟机迁移范围受限</p>
+<p>传统的二层网络，不能满足已经成为常态的作业的虚拟机迁移，也不能满足保障迁移范围和业务的可用性不受限制等业务。</p>
+<p>VXLAN的解决方式:</p>
+<p>VXLAN将虚拟机发出的原始报文进行封装后通过VXLAN隧道进行传输，这个隧道可以跨越任意网络，因此对于处于同一网段的虚拟机而言，从逻辑上看，相当于处于同一个二层域。也就是说，VXLAN技术在三层网络上构建可一个虚拟的大二层网络，只要虚拟机路由可达，就可以将其规划到同一个大二层网络中。</p>
+<h3 id="VXLAN的原理"><a href="#VXLAN的原理" class="headerlink" title="VXLAN的原理"></a>VXLAN的原理</h3><p>VXLAN是一种网络虚拟化技术,通过将原主机发出的数据报文封装在UDP中，并使用物理网络的IP、MAC最为外层头并行封装,然后在IP网络上传输,到达目的地后由隧道终结点解封装并将数据发送到目标主机。<br>VXLAN的UDP端口号:4789</p>
+<h3 id="VXLAN报文封装格式"><a href="#VXLAN报文封装格式" class="headerlink" title="VXLAN报文封装格式"></a>VXLAN报文封装格式</h3><p>VXLAN的通信过程:</p>
+<p>1、发送方向接收方发送数据帧，帧中包含了发送方和接收方的虚拟MAC地址。</p>
+<p>2、发送方连接的VTEP节点收到了数据帧，进行封装并发送给目的VTEP节点。</p>
+<p>3、报文经过Underlay网络传输到目的的VTEP节点</p>
+<p>4、目的VTEP节点收到报文后，解封装得到内部数据帧，并将此数据帧交付给接收方。</p>
+<p>5、接收方收到数据帧，传输完成。</p>
+<h3 id="配置实例"><a href="#配置实例" class="headerlink" title="配置实例"></a>配置实例</h3><div align=center> 
+<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/75ba1a3b4bb833a8.png'></img>
+<div align=left>]]></content>
       <categories>
         <category>云计算</category>
       </categories>
@@ -31,6 +43,26 @@
 <h4 id="负载均衡技术"><a href="#负载均衡技术" class="headerlink" title="负载均衡技术"></a>负载均衡技术</h4><p>  负载均衡技术不仅仅应用于CDN中，在网络的很多领域都得到了广泛的应用，如服务器的负载均衡、网络流量的负载均衡。顾名思义，网络中的负载均衡就是将网络的流量尽可能均匀分配到几个能完成相同任务的服务器或网络节点上，由此来避免部分网络节点过载。这样既可以提高网络流量，又提高了网络的整体性能。在CDN中，负载均衡又分为服务器负载均衡和服务器整体负载均衡(也有的称为服务器全局负载均衡)。服务器负载均衡是指能够在性能不同的服务器之间进行任务分配，既能保证性能差的服务器不成为系统的瓶颈，又能保证性能高的服务器的资源得到充分利用。而服务器整体负载均衡允许Web网络托管商、门户站点和企业根据地理位置分配内容和服务。通过使用多站点内容和服务来提高容错性和可用性，防止因本地网或区域网络中断、断电或自然灾害而导致的故障。在CDN的方案中服务器整体负载均衡将发挥重要作用，其性能高低将直接影响整个CDN的性能。</p>
 <h4 id="动态内容分发与复制技术"><a href="#动态内容分发与复制技术" class="headerlink" title="动态内容分发与复制技术"></a>动态内容分发与复制技术</h4><p>  大家都知道，网站访问响应速度取决于许多因素，如网络的带宽是否有瓶颈、传输途中的路由是否有阻塞和延迟、网站服务器的处理能力及访问距离等。多数情况下，网站响应速度和访问者与网站服务器之间的距离有密切的关系。如果访问者和网站之间的距离过远的话，它们之间的通信一样需要经过重重的路由转发和处理，网络延误不可避免。一个有效的方法就是利用内容分发与复制技术，将占网站主体的大部分静态网页、图像和流媒体数据分发复制到各地的加速节点上。所以动态内容分发与复制技术也是CDN所需的一个主要技术。</p>
 <h4 id="缓存技术"><a href="#缓存技术" class="headerlink" title="缓存技术"></a>缓存技术</h4><p>  缓存技术已经不是一种新鲜技术。Web缓存服务通过几种方式来改善用户的响应时间，如代理缓存服务、透明代理缓存服务、使用重定向服务的透明代理缓存服务等。通过Web缓存服务，用户访问网页时可以将广域网的流量降至最低。对于公司内联网用户来说，这意味着将内容在本地缓存，而无须通过专用的广域网来检索网页。对于Internet用户来说，这意味着将内容存储在他们的ISP的缓存器中，而无须通过Internet来检索网页。这样无疑会提高用户的访问速度。CDN的核心作用正是提高网络的访问速度，所以，缓存技术将是CDN所采用的又一个主要技术。</p>
+]]></content>
+      <categories>
+        <category>云计算</category>
+      </categories>
+      <tags>
+        <tag>云计算基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>云计算基础 - 总拥有成本（TCO）</title>
+    <url>/2022/07/10/%E4%BA%91%E8%AE%A1%E7%AE%97%E5%9F%BA%E7%A1%80%20-%20%E6%80%BB%E6%8B%A5%E6%9C%89%E6%88%90%E6%9C%AC%EF%BC%88TCO%EF%BC%89/</url>
+    <content><![CDATA[<h3 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h3><p>Total Cost of Ownership —— 总拥有成本</p>
+<p>TCO是一种公司经常采用的技术评价标准，它的核心思想是在一定时间范围内所拥有的包括置业成本（acquisition cost）和每年总成本在内的总体成本。在某些情况下，这一总体成本是一个为获得可比较的现行开支而对3到5年时间范围内的成本进行平均的值。</p>
+<p>总拥有成本（TCO）是公司内保有和维持所有软件所花费的成本</p>
+<h3 id="二、引言"><a href="#二、引言" class="headerlink" title="二、引言"></a>二、引言</h3><p>几乎所有的机构或企业在信息化的过程中都离不开成本的预算，尤其是在IT项目投资时，更是需要一种科学、合理的价值评估方法来晚场。本文的主题——总拥有成本TCO就是这样一种在完成这一任务的过程中建立起的一个经济评估机制。</p>
+<h3 id="三、什么是总拥有成本TCO"><a href="#三、什么是总拥有成本TCO" class="headerlink" title="三、什么是总拥有成本TCO"></a>三、什么是总拥有成本TCO</h3><p>关于总拥有成本TCO (Total cost of ownership)的概念，真实仁者见仁，智者见智，没有统一的定论。这里我们列举出比较有代表性的Gartner的定义：<br>权威机构Gartner对总拥有成本下的定义是：TCO是一种在整个企业范围内长期考虑企业整个成本的一种全局性的方法。它是定性分析机构的信息系统的效能的一种定量化的手段，是一种有助于机构全面彻底分析、评价、管理和降低自己的成本的一套方法和建模工具，从而提高整个IT投资的价值，使IT更好地支持业务。<br>TCO is the holistic view of costs across enterprise boundaries over time。TCO is a quantitative means for understanding the qualitative performance of the IS organization。TCO is a comprehensive set of methodologies, models and tools to help IS organizations better:<br>–Measure costs<br>–Manage costs<br>–Reduce costs<br>–Improve overall value of IT investments<br>–Align IT support to the business mission<br>总拥有成本TCO常常作为机构IT战略的一个重要组成部分，是一种公司经常采用的技术评价标准，它的核心是评估在一定时间范围内企业所拥有的包括置业成本（acquisition cost）和每年总成本在内的总体成本。与简单的投资回报率（ROI）的计算相比，总体拥有成本的计算往往侧重于长期深入的分析，所以它成为存储经济评估最有效的工具之一。在某些情况下，这一总体成本是一个为获得可比较的现行开支而对3到5年时间范围内的成本进行平均的值。具体来说，我们可以从以下具体的方面来评估TCO的值：</p>
+<h3 id="四、总拥有成本TCO的核算"><a href="#四、总拥有成本TCO的核算" class="headerlink" title="四、总拥有成本TCO的核算"></a>四、总拥有成本TCO的核算</h3><p>总体拥有成本核算一般由两大部份构成：技术和业务。技术成本包括与硬件、软件（含维护和升级）、安装、培训的成本，以及操作、支持和咨询等人力开支。<br>业务成本涉及到可用性、性能和恢复相关的财务问题。可用性又包括因可用性的提高而带来的收益和因数据不可用而付出的代价两个方面。因可用性的提高而带来的商业收益包括与解决方案相关的收益、节约的人力资源成本和新投资带来的生产率的提高等部分。性能因素就是评价性能对数据可用性的贡献。对性能改进的计算方法不是计算一次性收益，而是要计算随着时间推移不断提高的收益。<br>恢复成本指的是一旦存储设施出现故障，恢复到正常运行所花费的时间和资金。它还包含由此产生商业价值的损失和对生产率的影响，以及其他一些杂项开支。<br>通过总体拥有成本来考量IT费用，对于各种规模大小的公司都非常有用。 这意味着我们不单看到了终端用户的硬件成本，而且考虑了所有即将带来的相关的成本：<br>附加的资产成本 - 软件、IT支持软件和网络架构。<br>技术支持成本 - 硬件和软件布署、技术支持人员、系统维护。<br>管理成本 - 财务、供应商管理、用户培训、资产管理。<br>终端用户操作成本 - 宕机成本，用户相互支持和昂贵的IT技术人员支持。</p>
+<h3 id="五、TCO的优点和缺点"><a href="#五、TCO的优点和缺点" class="headerlink" title="五、TCO的优点和缺点"></a>五、TCO的优点和缺点</h3><h4 id="1、TCO的优点——利于进行预算"><a href="#1、TCO的优点——利于进行预算" class="headerlink" title="1、TCO的优点——利于进行预算"></a>1、TCO的优点——利于进行预算</h4><p>TCO 的突出优点是：在某个项目购进的初期人们对其将来可能要投入的成本尚未清楚的时候，提供了一种强有力的成本估算方法。然而, 由于这种估算方法只看重成本，所以对于完全仰赖TCO 而言，将使这样的公司最终采取将开支减到最少的策略，而不再考虑如何把最大限度获得回报的策略。为此，这些公司可能购买成本最低廉的应用软件，而很少选择那些能对公司的最低要求产生最大影响的应用软件。<br>在绝大多数情形下, 计算总所有成本是一个需要持续努力的过程，它既需要考虑技术方面的因素，又要能兼顾到非技术方面的因素。想要对相关的应用软件的持续成本有个完全的了解，最好通过至少 3 年左右的时间范围来计算TCO。包括软件和硬件成本在内的各项成本加上真正上马该软件前准备工作中的咨询和有关支持成本都是在计算TCO时要考虑在内的。而真正上马该软件后，随后几年的维护、升级成本以及培训用户和IT支持方面的成本也是必须要考虑的。<br>每年的年度 TCO 数字是一个关于现行成本状况的卓越的指示器，同时又能被很好地用作达到预算目标的并且在以预算为目的项目上被很好地使用。与其他类似的方法相比，在一段时间范围内的平均 TCO 值提供了一个比较合理的标准。但是，平均 TCO 不能洞察成本的时机情况。我们发现，低投入成本高投入维护的产品没有高投入成本低投入维护的产品更能吸引人，但是通过一段时间的分析，这样两类产品在TCO方面是类似的，几乎没什么差别。</p>
+<h4 id="2、TCO的缺点"><a href="#2、TCO的缺点" class="headerlink" title="2、TCO的缺点"></a>2、TCO的缺点</h4><p>总所有成本存在的问题是：由于它是被孤立使用的，所以提供的仅仅是一种有关某一个应用软件的成本的非常狭窄的方法。TCO 完全地不考虑利润，而你关心的不只是选择最便宜的应用软件，更重要的是你要考虑选择最能给公司带来利润或回报的应用软件。举例来说，你可能可以让一个兼职的实习医师用微软的Front Page建一个网站, 但是这样做你最终能得到最大的利润回报吗？<br>同样道理，TCO不能帮你优化项目，因为建立在最低成本基础上的优化将意谓着从不在项目中投资。相反，优化要求公司要在成本、收益和投资风险中衡量各种因素后再最终决定究竟如何开始迈出第一步。<br>在财政方面没有腐败等纪律问题，每家公司应该对他们做的每一项技术投资的持续费用的有一个清楚认识。因为TCO能很容易的得出成本费用并且在基于较少的开支上作决定的方面有一个具体的数字，所以许多公司和分析家已经观注TCO、把它作为一种重要具体的标准。然而,技术能对底线有很大的影响。看着全部费用和利益已超出的TCO情况，它能使你的确定你虽然采用不是最廉宜的解决方案 , 但对你的公司是最好解决。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>通过上述分析可以看出，TCO有它的优势，也存在不足之处。TCO不涉及任何财务纪律方面的事，而且通过TCO，每家公司都可以对自己投资在每一项技术的现行成本了如指掌。正是因为TCO能为企业提供看得见摸得着的数字，所以很多公司都把它作为一项基本的技术评价准则。有了TCO，企业就能很容易地看到成本的流转情况，并在尽可能低的支出基础上进行决策。不过，我们必须清楚，技术对企业的最低要求有着显著的影响，我们不能局限于TCO方法，要全面考虑，兼顾成本和收益等各种因素，以确保所选择的解决方案不一定是最便宜的，但一定要是最好的。</p>
 ]]></content>
       <categories>
         <category>云计算</category>
@@ -79,6 +111,92 @@
 <h3 id="导致计划内的停机因素有："><a href="#导致计划内的停机因素有：" class="headerlink" title="导致计划内的停机因素有："></a>导致计划内的停机因素有：</h3><p>　　周期性的备份<br>　　软件升级<br>　　硬件扩充或维修<br>　　系统配置更改<br>　　数据更改 </p>
 <h3 id="导致计划外停机的因素有："><a href="#导致计划外停机的因素有：" class="headerlink" title="导致计划外停机的因素有："></a>导致计划外停机的因素有：</h3><p>　　硬件失败<br>　　文件系统满错误<br>　　内存溢出<br>　　备份失败<br>　　磁盘满<br>　　供电失败<br>　　网络失败<br>　　应用失败<br>　　自然灾害<br>　　操作或管理失误<br>　　通过有针对性的设计，可以避免上述全部或部分因素带来的损失。当然，100％的高可用系统是不存在的。 </p>
 <h3 id="创建高可用性的计算机系统"><a href="#创建高可用性的计算机系统" class="headerlink" title="创建高可用性的计算机系统"></a>创建高可用性的计算机系统</h3><p>　　在UNIX系统上创建高可用性计算机系统，业界的通行做法，也是非常有效的做法，就是采用群集系统（Cluster），将各个主机系统通过网络或其他手段有机地组成一个群体，共同对外提供服务。创建群集系统，通过实现高可用性的软件将冗余的高可用性的硬件组件和软件组件组合起来，消除单点故障：<br>　　消除供电的单点故障<br>　　消除磁盘的单点故障<br>　　消除SPU（System Process Unit）单点故障<br>　　消除网络单点故障<br>　　消除软件单点故障<br>　　尽量消除单系统运行时的单点故障</p>
+]]></content>
+      <categories>
+        <category>云计算</category>
+      </categories>
+      <tags>
+        <tag>云计算基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>云计算基础框架</title>
+    <url>/2022/07/12/%E4%BA%91%E8%AE%A1%E7%AE%97%E5%9F%BA%E7%A1%80%E6%A1%86%E6%9E%B6/</url>
+    <content><![CDATA[<p>本文为仅供参考的学习框架，需配合具体内容源使用。</p>
+<div align=center> 
+<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/e0394c640b2b7011.png'></img>
+<div align=left>
+
+<h1 id="一、云计算的基本概念"><a href="#一、云计算的基本概念" class="headerlink" title="一、云计算的基本概念"></a>一、云计算的基本概念</h1><h2 id="1-云计算的定义"><a href="#1-云计算的定义" class="headerlink" title="1.云计算的定义"></a>1.云计算的定义</h2><h2 id="2-云计算的分类"><a href="#2-云计算的分类" class="headerlink" title="2.云计算的分类"></a>2.云计算的分类</h2><h3 id="IaaS"><a href="#IaaS" class="headerlink" title="IaaS"></a>IaaS</h3><h3 id="PaaS"><a href="#PaaS" class="headerlink" title="PaaS"></a>PaaS</h3><h3 id="SaaS"><a href="#SaaS" class="headerlink" title="SaaS"></a>SaaS</h3><h2 id="3-云计算的部署模式"><a href="#3-云计算的部署模式" class="headerlink" title="3.云计算的部署模式"></a>3.云计算的部署模式</h2><h3 id="公有云"><a href="#公有云" class="headerlink" title="公有云"></a>公有云</h3><h3 id="私有云"><a href="#私有云" class="headerlink" title="私有云"></a>私有云</h3><h3 id="混合云"><a href="#混合云" class="headerlink" title="混合云"></a>混合云</h3><h3 id="分布式云"><a href="#分布式云" class="headerlink" title="分布式云"></a>分布式云</h3><h2 id="4-云计算的组成要素"><a href="#4-云计算的组成要素" class="headerlink" title="4.云计算的组成要素"></a>4.云计算的组成要素</h2><h1 id="二、计算基础"><a href="#二、计算基础" class="headerlink" title="二、计算基础"></a>二、计算基础</h1><h2 id="1-服务器"><a href="#1-服务器" class="headerlink" title="1.服务器"></a>1.服务器</h2><h3 id="CPU"><a href="#CPU" class="headerlink" title="CPU"></a>CPU</h3><h3 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h3><h3 id="存储（文件系统、RAID）"><a href="#存储（文件系统、RAID）" class="headerlink" title="存储（文件系统、RAID）"></a>存储（文件系统、RAID）</h3><h2 id="2-操作系统"><a href="#2-操作系统" class="headerlink" title="2.操作系统"></a>2.操作系统</h2><h1 id="三、存储基础"><a href="#三、存储基础" class="headerlink" title="三、存储基础"></a>三、存储基础</h1><h2 id="1-存储的分类（块存储、文件存储、对象存储）"><a href="#1-存储的分类（块存储、文件存储、对象存储）" class="headerlink" title="1.存储的分类（块存储、文件存储、对象存储）"></a>1.存储的分类（块存储、文件存储、对象存储）</h2><h2 id="2-存储的拓展（DAS、FC-SAN、IP-SAN、NAS）"><a href="#2-存储的拓展（DAS、FC-SAN、IP-SAN、NAS）" class="headerlink" title="2.存储的拓展（DAS、FC-SAN、IP-SAN、NAS）"></a>2.存储的拓展（DAS、FC-SAN、IP-SAN、NAS）</h2><h3 id="关系数据库-事务四大特征"><a href="#关系数据库-事务四大特征" class="headerlink" title="关系数据库-事务四大特征"></a>关系数据库-事务四大特征</h3><h2 id="3-服务器虚拟化"><a href="#3-服务器虚拟化" class="headerlink" title="3.服务器虚拟化"></a>3.服务器虚拟化</h2><h3 id="CPU虚拟化（实现虚拟机指令到硬件CPU的传递）"><a href="#CPU虚拟化（实现虚拟机指令到硬件CPU的传递）" class="headerlink" title="CPU虚拟化（实现虚拟机指令到硬件CPU的传递）"></a>CPU虚拟化（实现虚拟机指令到硬件CPU的传递）</h3><p>利用二进制翻译的全虚拟化<br>半虚拟化<br>硬件辅助虚拟化</p>
+<h3 id="内存虚拟化（实现虚拟机对硬件内存进行操作）"><a href="#内存虚拟化（实现虚拟机对硬件内存进行操作）" class="headerlink" title="内存虚拟化（实现虚拟机对硬件内存进行操作）"></a>内存虚拟化（实现虚拟机对硬件内存进行操作）</h3><p>全虚拟化<br>硬件辅助虚拟化</p>
+<h3 id="I-x2F-O设备虚拟化（实现虚拟机对硬件I-x2F-O设备进行操作）"><a href="#I-x2F-O设备虚拟化（实现虚拟机对硬件I-x2F-O设备进行操作）" class="headerlink" title="I&#x2F;O设备虚拟化（实现虚拟机对硬件I&#x2F;O设备进行操作）"></a>I&#x2F;O设备虚拟化（实现虚拟机对硬件I&#x2F;O设备进行操作）</h3><p>全虚拟化<br>半虚拟化<br>Pass-through（直通）<br>硬件辅助虚拟化</p>
+<h2 id="4-虚拟机性能和稳定性的提高"><a href="#4-虚拟机性能和稳定性的提高" class="headerlink" title="4.虚拟机性能和稳定性的提高"></a>4.虚拟机性能和稳定性的提高</h2><p>NUMA（Non Uniform Memory Access，非一致性内存访问）优化计算性能：原理即为绑定CPU及其本地内存，避免远端内存带来的延迟和性能损耗<br>内存超分配<br>内存气泡<br>动态资源添加DRX<br>动态资源调度DRS</p>
+<h1 id="四、网络基础"><a href="#四、网络基础" class="headerlink" title="四、网络基础"></a>四、网络基础</h1><h2 id="1-网络流量走向（东西向、南北向）"><a href="#1-网络流量走向（东西向、南北向）" class="headerlink" title="1.网络流量走向（东西向、南北向）"></a>1.网络流量走向（东西向、南北向）</h2><p>虚拟机之间东西向的安全问题：虚拟分布式防火墙<br>虚拟机之间南北向的安全问题：网络功能虚拟化（NFV）</p>
+<h2 id="2-网络功能虚拟化（NFV）"><a href="#2-网络功能虚拟化（NFV）" class="headerlink" title="2.网络功能虚拟化（NFV）"></a>2.网络功能虚拟化（NFV）</h2><p>核心：将网络功能从承载这些功能的硬件中抽离出来，最终实现：统一通用硬件平台+业务逻辑软件 的开放架构</p>
+<h2 id="3-软件定义网络（SDN）"><a href="#3-软件定义网络（SDN）" class="headerlink" title="3.软件定义网络（SDN）"></a>3.软件定义网络（SDN）</h2><p>核心：将网络设备的控制平面与数据平面分离，实现网络流量的统一、高效控制</p>
+<h2 id="4-软件定义存储（SDS）（分布式存储）"><a href="#4-软件定义存储（SDS）（分布式存储）" class="headerlink" title="4.软件定义存储（SDS）（分布式存储）"></a>4.软件定义存储（SDS）（分布式存储）</h2><p>核心：采用通用x86服务器，分布式架构</p>
+<h2 id="5-如何提高存储的可靠性"><a href="#5-如何提高存储的可靠性" class="headerlink" title="5.如何提高存储的可靠性"></a>5.如何提高存储的可靠性</h2><h3 id="多副本存储（脑裂、仲裁机制）"><a href="#多副本存储（脑裂、仲裁机制）" class="headerlink" title="多副本存储（脑裂、仲裁机制）"></a>多副本存储（脑裂、仲裁机制）</h3><h3 id="纠删码存储"><a href="#纠删码存储" class="headerlink" title="纠删码存储"></a>纠删码存储</h3><h2 id="6-如何提高存储的性能"><a href="#6-如何提高存储的性能" class="headerlink" title="6.如何提高存储的性能"></a>6.如何提高存储的性能</h2><h3 id="分布式存储架构"><a href="#分布式存储架构" class="headerlink" title="分布式存储架构"></a>分布式存储架构</h3><h3 id="条带化-amp-I-x2F-O本地化技术"><a href="#条带化-amp-I-x2F-O本地化技术" class="headerlink" title="条带化&amp;I&#x2F;O本地化技术"></a>条带化&amp;I&#x2F;O本地化技术</h3><h3 id="存储分层技术（SSD-HDD，根据数据使用的频次）"><a href="#存储分层技术（SSD-HDD，根据数据使用的频次）" class="headerlink" title="存储分层技术（SSD+HDD，根据数据使用的频次）"></a>存储分层技术（SSD+HDD，根据数据使用的频次）</h3><h1 id="五、三节点超融合组网"><a href="#五、三节点超融合组网" class="headerlink" title="五、三节点超融合组网"></a>五、三节点超融合组网</h1><h1 id="六、应用程序"><a href="#六、应用程序" class="headerlink" title="六、应用程序"></a>六、应用程序</h1><h2 id="1-微服务"><a href="#1-微服务" class="headerlink" title="1.微服务"></a>1.微服务</h2><p>软件系统架构的演变：<br>集中式架构 –&gt; 垂直拆分 –&gt; 分布式服务 –&gt; 面向服务架构（SOA） –&gt; 微服务架构</p>
+<h2 id="2-容器"><a href="#2-容器" class="headerlink" title="2.容器"></a>2.容器</h2><div align=center> 
+<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/fff892c8171ab948.png'></img>
+<div align=left>
+
+
+<h2 id="3-K8S（Kubernetes）"><a href="#3-K8S（Kubernetes）" class="headerlink" title="3.K8S（Kubernetes）"></a>3.K8S（Kubernetes）</h2><p>用于对容器的生命周期进行管理（实现容器的高可用、监控告警）<br>master节点：负责管理和控制<br>node节点：负责工作负载</p>
+<p>容器、Docker、K8S和PaaS平台的关系如下：</p>
+<div align=center> 
+<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/a45d42037ffd104f.png'></img>
+<div align=left>
+
+
+<h2 id="4-DevOps"><a href="#4-DevOps" class="headerlink" title="4.DevOps"></a>4.DevOps</h2><div align=center> 
+<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/8b74d0617ff02f9c.png'></img>
+<div align=left>
+
+<p>一个理想的软件开发流水线：</p>
+<div align=center> 
+<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/270bc3888ecc5670.png'></img>
+<div align=left>
+
+
+<h2 id="5-云原生"><a href="#5-云原生" class="headerlink" title="5.云原生"></a>5.云原生</h2><p>云原生：应用原生被设计为在云以上以最佳方式运行，充分发挥云的优势<br>Core：让应用关注业务需求的实现，而把非业务需求的实现（比如各自计算资源）下沉到云。（基础设施的中间件）</p>
+<div align=center> 
+<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/1a2784827492b23a.png'></img>
+<div align=left>
+
+<p>拓展问题：容器化和云原生下的负载均衡<br>K8S通过开源组件实现的负载均衡效果不好 –&gt; 使用公司的cnAD</p>
+<h2 id="6-大数据"><a href="#6-大数据" class="headerlink" title="6.大数据"></a>6.大数据</h2><p>什么是大数据？<br>4V<br>volume：数据量巨大<br>variety：种类和来源多样化（目前企业数据的80%以上为非结构化数据）<br>velocity：分析处理速度快<br>value：价值密度低，商业价值高</p>
+<p>大数据使用流程：</p>
+<div align=center> 
+<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/f1115ad9bfb7b968.png'></img>
+<div align=left>
+
+<p>大数据应用挑战：<br>1.技术门槛高<br>2.交付成本高（定制需求多，且部署周期长，后期维护管理成本高）<br>3.开源版本难以支撑复杂业务</p>
+<h2 id="7-云管平台"><a href="#7-云管平台" class="headerlink" title="7.云管平台"></a>7.云管平台</h2><p>业务发展 –&gt; 稳态业务与敏态业务的分离（敏态业务上线公有云）–&gt; 如何实现私有及公有数据中心对外业务的统一管理–&gt; 云管（CMP）</p>
+<div align=center> 
+<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/7f975a3a6005cdd6.png'></img>
+<div align=left>
+
+
+<h2 id="8-容灾备份"><a href="#8-容灾备份" class="headerlink" title="8.容灾备份"></a>8.容灾备份</h2><p>灾备：容灾与备份</p>
+<div align=center> 
+<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/ac42eec899e4d2d5.png'></img>
+<div align=left>
+
+<h3 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h3><p>数据中心容灾相关概念——RPO和RTO</p>
+<div align=center> 
+<img src = 'https://i.bmp.ovh/imgs/2022/07/13/5afd6e617e31e00e.png'></img>
+<div align=left>
+
+<p>常见业务保护方式的RPO和RTO</p>
+<div align=center> 
+<img src = 'https://i.bmp.ovh/imgs/2022/07/13/f64ae9916a904d64.png'></img>
+<div align=left>
+
+<p>快照技术：<br>COW<br>ROW</p>
+<p>持续性数据保护CDP：<br>Core: 记录应用数据变化时的日志，在系统故障时根据数据变化日志进行恢复。RPO约为0，RTO为10min到30min。</p>
+<h3 id="容灾"><a href="#容灾" class="headerlink" title="容灾"></a>容灾</h3><p>(1) 主备容灾数据中心解决方案：异地。平时只开主数据中心。RPO秒级，RTO分钟级。</p>
+<p>(2) 双活数据中心解决方案：本地，裸光纤直连。两个中心同时对外提供服务。RPO&#x3D;0，RTO&#x3D;0。</p>
+<p>(3) 数据中心“两地三中心”解决方案：上述两种方案的结合。</p>
 ]]></content>
       <categories>
         <category>云计算</category>
@@ -194,89 +312,27 @@
       </tags>
   </entry>
   <entry>
-    <title>云计算基础框架</title>
-    <url>/2022/07/12/%E4%BA%91%E8%AE%A1%E7%AE%97%E5%9F%BA%E7%A1%80%E6%A1%86%E6%9E%B6/</url>
-    <content><![CDATA[<p>本文为仅供参考的学习框架，需配合具体内容源使用。</p>
-<div align=center> 
-<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/e0394c640b2b7011.png'></img>
-<div align=left>
-
-<h1 id="一、云计算的基本概念"><a href="#一、云计算的基本概念" class="headerlink" title="一、云计算的基本概念"></a>一、云计算的基本概念</h1><h2 id="1-云计算的定义"><a href="#1-云计算的定义" class="headerlink" title="1.云计算的定义"></a>1.云计算的定义</h2><h2 id="2-云计算的分类"><a href="#2-云计算的分类" class="headerlink" title="2.云计算的分类"></a>2.云计算的分类</h2><h3 id="IaaS"><a href="#IaaS" class="headerlink" title="IaaS"></a>IaaS</h3><h3 id="PaaS"><a href="#PaaS" class="headerlink" title="PaaS"></a>PaaS</h3><h3 id="SaaS"><a href="#SaaS" class="headerlink" title="SaaS"></a>SaaS</h3><h2 id="3-云计算的部署模式"><a href="#3-云计算的部署模式" class="headerlink" title="3.云计算的部署模式"></a>3.云计算的部署模式</h2><h3 id="公有云"><a href="#公有云" class="headerlink" title="公有云"></a>公有云</h3><h3 id="私有云"><a href="#私有云" class="headerlink" title="私有云"></a>私有云</h3><h3 id="混合云"><a href="#混合云" class="headerlink" title="混合云"></a>混合云</h3><h3 id="分布式云"><a href="#分布式云" class="headerlink" title="分布式云"></a>分布式云</h3><h2 id="4-云计算的组成要素"><a href="#4-云计算的组成要素" class="headerlink" title="4.云计算的组成要素"></a>4.云计算的组成要素</h2><h1 id="二、计算基础"><a href="#二、计算基础" class="headerlink" title="二、计算基础"></a>二、计算基础</h1><h2 id="1-服务器"><a href="#1-服务器" class="headerlink" title="1.服务器"></a>1.服务器</h2><h3 id="CPU"><a href="#CPU" class="headerlink" title="CPU"></a>CPU</h3><h3 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h3><h3 id="存储（文件系统、RAID）"><a href="#存储（文件系统、RAID）" class="headerlink" title="存储（文件系统、RAID）"></a>存储（文件系统、RAID）</h3><h2 id="2-操作系统"><a href="#2-操作系统" class="headerlink" title="2.操作系统"></a>2.操作系统</h2><h1 id="三、存储基础"><a href="#三、存储基础" class="headerlink" title="三、存储基础"></a>三、存储基础</h1><h2 id="1-存储的分类（块存储、文件存储、对象存储）"><a href="#1-存储的分类（块存储、文件存储、对象存储）" class="headerlink" title="1.存储的分类（块存储、文件存储、对象存储）"></a>1.存储的分类（块存储、文件存储、对象存储）</h2><h2 id="2-存储的拓展（DAS、FC-SAN、IP-SAN、NAS）"><a href="#2-存储的拓展（DAS、FC-SAN、IP-SAN、NAS）" class="headerlink" title="2.存储的拓展（DAS、FC-SAN、IP-SAN、NAS）"></a>2.存储的拓展（DAS、FC-SAN、IP-SAN、NAS）</h2><h3 id="关系数据库-事务四大特征"><a href="#关系数据库-事务四大特征" class="headerlink" title="关系数据库-事务四大特征"></a>关系数据库-事务四大特征</h3><h2 id="3-服务器虚拟化"><a href="#3-服务器虚拟化" class="headerlink" title="3.服务器虚拟化"></a>3.服务器虚拟化</h2><h3 id="CPU虚拟化（实现虚拟机指令到硬件CPU的传递）"><a href="#CPU虚拟化（实现虚拟机指令到硬件CPU的传递）" class="headerlink" title="CPU虚拟化（实现虚拟机指令到硬件CPU的传递）"></a>CPU虚拟化（实现虚拟机指令到硬件CPU的传递）</h3><p>利用二进制翻译的全虚拟化<br>半虚拟化<br>硬件辅助虚拟化</p>
-<h3 id="内存虚拟化（实现虚拟机对硬件内存进行操作）"><a href="#内存虚拟化（实现虚拟机对硬件内存进行操作）" class="headerlink" title="内存虚拟化（实现虚拟机对硬件内存进行操作）"></a>内存虚拟化（实现虚拟机对硬件内存进行操作）</h3><p>全虚拟化<br>硬件辅助虚拟化</p>
-<h3 id="CPU虚拟化（实现虚拟机对硬件I-x2F-O设备进行操作）"><a href="#CPU虚拟化（实现虚拟机对硬件I-x2F-O设备进行操作）" class="headerlink" title="CPU虚拟化（实现虚拟机对硬件I&#x2F;O设备进行操作）"></a>CPU虚拟化（实现虚拟机对硬件I&#x2F;O设备进行操作）</h3><p>全虚拟化<br>半虚拟化<br>Pass-through（直通）<br>硬件辅助虚拟化</p>
-<h2 id="4-虚拟机性能和稳定性的提高"><a href="#4-虚拟机性能和稳定性的提高" class="headerlink" title="4.虚拟机性能和稳定性的提高"></a>4.虚拟机性能和稳定性的提高</h2><p>NUMA（Non Uniform Memory Access，非一致性内存访问）优化计算性能：原理即为绑定CPU及其本地内存，避免远端内存带来的延迟和性能损耗<br>内存超分配（通过内存气泡实现）<br>动态资源添加DRX<br>动态资源调度DRS</p>
-<h1 id="四、网络基础"><a href="#四、网络基础" class="headerlink" title="四、网络基础"></a>四、网络基础</h1><h2 id="1-网络流量走向（东西向、南北向）"><a href="#1-网络流量走向（东西向、南北向）" class="headerlink" title="1.网络流量走向（东西向、南北向）"></a>1.网络流量走向（东西向、南北向）</h2><p>虚拟机之间东西向的安全问题：虚拟分布式防火墙<br>虚拟机之间南北向的安全问题：网络功能虚拟化（NFV）</p>
-<h2 id="2-网络功能虚拟化（NFV）"><a href="#2-网络功能虚拟化（NFV）" class="headerlink" title="2.网络功能虚拟化（NFV）"></a>2.网络功能虚拟化（NFV）</h2><p>核心：将网络功能从承载这些功能的硬件中抽离出来，最终实现：统一通用硬件平台+业务逻辑软件 的开放架构</p>
-<h2 id="3-软件定义网络（SDN）"><a href="#3-软件定义网络（SDN）" class="headerlink" title="3.软件定义网络（SDN）"></a>3.软件定义网络（SDN）</h2><p>核心：将网络设备的控制平面与数据平面分离，实现网路流量的统一、高效控制</p>
-<h2 id="4-软件定义存储（SDS）（分布式存储）"><a href="#4-软件定义存储（SDS）（分布式存储）" class="headerlink" title="4.软件定义存储（SDS）（分布式存储）"></a>4.软件定义存储（SDS）（分布式存储）</h2><p>核心：采用通用x86服务器，分布式架构</p>
-<h2 id="5-如何提高存储的可靠性"><a href="#5-如何提高存储的可靠性" class="headerlink" title="5.如何提高存储的可靠性"></a>5.如何提高存储的可靠性</h2><h3 id="多副本存储（脑裂、仲裁机制）"><a href="#多副本存储（脑裂、仲裁机制）" class="headerlink" title="多副本存储（脑裂、仲裁机制）"></a>多副本存储（脑裂、仲裁机制）</h3><h3 id="纠删码存储"><a href="#纠删码存储" class="headerlink" title="纠删码存储"></a>纠删码存储</h3><h2 id="6-如何提高存储的性能"><a href="#6-如何提高存储的性能" class="headerlink" title="6.如何提高存储的性能"></a>6.如何提高存储的性能</h2><h3 id="分布式存储架构"><a href="#分布式存储架构" class="headerlink" title="分布式存储架构"></a>分布式存储架构</h3><h3 id="条带化-amp-I-x2F-O本地化技术"><a href="#条带化-amp-I-x2F-O本地化技术" class="headerlink" title="条带化&amp;I&#x2F;O本地化技术"></a>条带化&amp;I&#x2F;O本地化技术</h3><h3 id="存储分层技术（SSD-HDD，根据数据使用的频次）"><a href="#存储分层技术（SSD-HDD，根据数据使用的频次）" class="headerlink" title="存储分层技术（SSD+HDD，根据数据使用的频次）"></a>存储分层技术（SSD+HDD，根据数据使用的频次）</h3><h1 id="五、三节点超融合组网"><a href="#五、三节点超融合组网" class="headerlink" title="五、三节点超融合组网"></a>五、三节点超融合组网</h1><h1 id="六、应用程序"><a href="#六、应用程序" class="headerlink" title="六、应用程序"></a>六、应用程序</h1><h2 id="1-微服务"><a href="#1-微服务" class="headerlink" title="1.微服务"></a>1.微服务</h2><p>软件系统架构的演变：<br>集中式架构 –&gt; 垂直拆分 –&gt; 分布式服务 –&gt; 面向服务架构（SOA） –&gt; 微服务架构</p>
-<h2 id="2-容器"><a href="#2-容器" class="headerlink" title="2.容器"></a>2.容器</h2><div align=center> 
-<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/fff892c8171ab948.png'></img>
-<div align=left>
-
-
-<h2 id="3-K8S（Kubernetes）"><a href="#3-K8S（Kubernetes）" class="headerlink" title="3.K8S（Kubernetes）"></a>3.K8S（Kubernetes）</h2><p>用于对容器的生命周期进行管理（实现容器的高可用、监控告警）<br>master节点：负责管理和控制<br>node节点：负责工作负载</p>
-<p>容器、Docker、K8S和PaaS平台的关系如下：</p>
-<div align=center> 
-<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/a45d42037ffd104f.png'></img>
-<div align=left>
-
-
-<h2 id="4-DevOps"><a href="#4-DevOps" class="headerlink" title="4.DevOps"></a>4.DevOps</h2><div align=center> 
-<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/8b74d0617ff02f9c.png'></img>
-<div align=left>
-
-<p>一个理想的软件开发流水线：</p>
-<div align=center> 
-<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/270bc3888ecc5670.png'></img>
-<div align=left>
-
-
-<h2 id="5-云原生"><a href="#5-云原生" class="headerlink" title="5.云原生"></a>5.云原生</h2><p>云原生：应用原生被设计为在云以上以最佳方式运行，充分发挥云的优势<br>Core：让应用关注业务需求的实现，而把非业务需求的实现（比如各自计算资源）下沉到云。（基础设施的中间件）</p>
-<div align=center> 
-<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/1a2784827492b23a.png'></img>
-<div align=left>
-
-<p>拓展问题：容器化和云原生下的负载均衡<br>K8S通过开源组件实现的负载均衡效果不好 –&gt; 使用公司的cnAD</p>
-<h2 id="6-大数据"><a href="#6-大数据" class="headerlink" title="6.大数据"></a>6.大数据</h2><p>什么是大数据？<br>4V<br>volume：数据量巨大<br>variety：种类和来源多样化（目前企业数据的80%以上为非结构化数据）<br>velocity：分析处理速度快<br>value：价值密度低，商业价值高</p>
-<p>大数据使用流程：</p>
-<div align=center> 
-<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/f1115ad9bfb7b968.png'></img>
-<div align=left>
-
-<p>大数据应用挑战：<br>1.技术门槛高<br>2.交付成本高（定制需求多，且部署周期长，后期维护管理成本高）<br>3.开源版本难以支撑复杂业务</p>
-<h2 id="7-云管平台"><a href="#7-云管平台" class="headerlink" title="7.云管平台"></a>7.云管平台</h2><p>业务发展 –&gt; 稳态业务与敏态业务的分离（敏态业务上线公有云）–&gt; 如何实现私有及公有数据中心对外业务的统一管理–&gt; 云管（CMP）</p>
-<div align=center> 
-<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/7f975a3a6005cdd6.png'></img>
-<div align=left>
-
-
-<h2 id="8-容灾备份"><a href="#8-容灾备份" class="headerlink" title="8.容灾备份"></a>8.容灾备份</h2><p>灾备：容灾与备份</p>
-<div align=center> 
-<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/ac42eec899e4d2d5.png'></img>
-<div align=left>
-
-<h3 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h3><p>数据中心容灾相关概念——RPO和RTO</p>
-<div align=center> 
-<img src = 'https://i.bmp.ovh/imgs/2022/07/13/5afd6e617e31e00e.png'></img>
-<div align=left>
-
-<p>常见业务保护方式的RPO和RTO</p>
-<div align=center> 
-<img src = 'https://i.bmp.ovh/imgs/2022/07/13/f64ae9916a904d64.png'></img>
-<div align=left>
-
-<p>快照技术：<br>COW<br>ROW</p>
-<p>持续性数据保护CDP：<br>Core: 记录应用数据变化时的日志，在系统故障时根据数据变化日志进行恢复。RPO约为0，RTO为10min到30min。</p>
-<h3 id="容灾"><a href="#容灾" class="headerlink" title="容灾"></a>容灾</h3><p>(1) 主备容灾数据中心解决方案：异地。平时只开主数据中心。RPO秒级，RTO分钟级。</p>
-<p>(2) 双活数据中心解决方案：本地，裸光纤直连。两个中心同时对外提供服务。RPO&#x3D;0，RTO&#x3D;0。</p>
-<p>(3) 数据中心“两地三中心”解决方案：上述两种方案的结合。</p>
-]]></content>
+    <title>移动通信基础 - 无线信道衰落</title>
+    <url>/2022/04/26/%E7%A7%BB%E5%8A%A8%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80%20-%20%E6%97%A0%E7%BA%BF%E4%BF%A1%E9%81%93%E8%A1%B0%E8%90%BD/</url>
+    <content><![CDATA[<h1 id="一、无线电波传播效应"><a href="#一、无线电波传播效应" class="headerlink" title="一、无线电波传播效应"></a>一、无线电波传播效应</h1><p>无线通信信道是一种时变信道，无线电信号通过信道时会遭受来自不同途径的衰落，接收信号总功率表现为路径损失，阴影衰落，多径效应三种效应的综合。<br>（多径传播：电波遇到各种障碍物时会发生反射、绕射和散射现象，会对直射波形成干涉，也就是收发信机之间是有多条路径传播的。）</p>
+<p>1.路径损失：大范围内信号强度随距离变化（数百或数千个波长），应该是与距离的平方成正比，本质上表现为电波能量扩散现象。</p>
+<p>2.阴影衰落：中范围信号电平中值慢变（数百个波长），由于传播环境中的地形起伏、建筑物及其他障碍物对电波遮蔽所引起的慢衰落，信号中值出现缓慢变动，衰落深度与频率、阻碍物有关。</p>
+<p>3.多径效应（衰落）：小范围信号瞬时值快变（数十个波长），由于多径传播引起的快衰落，接收信号场强的瞬时值呈现快速变化。</p>
+<h1 id="二、无线信道衰落"><a href="#二、无线信道衰落" class="headerlink" title="二、无线信道衰落"></a>二、无线信道衰落</h1><p>根据无线电波传播效应，通常将无线信道衰落分为两类：大尺度衰落和小尺度（小尺度一般与信号波长为一个量级）衰落，尺度指时间或者距离的大小。</p>
+<h2 id="大尺度衰落："><a href="#大尺度衰落：" class="headerlink" title="大尺度衰落："></a>大尺度衰落：</h2><p>（包括传输损失、阴影衰落；大尺度衰落都是慢衰落，但是慢衰落不一定是大尺度衰落。）</p>
+<p>传输损失（路径损失）：无线电信号通过大尺度距离的信道传输时，随传输路径的增加，电波能量扩散，导致接收信号平均功率衰减，其衰减量与传输距离有关，距离越大，衰减量越多。</p>
+<p>阴影衰落：无线电信号在中尺度距离的信道中传输时，由于地形起伏或高大建筑物群等障碍物遮挡，在阻碍物的背后形成阴影区，导致接收信号平均功率随机变化。其衰落特性服从对数正态分布。</p>
+<h2 id="小尺度衰落："><a href="#小尺度衰落：" class="headerlink" title="小尺度衰落："></a>小尺度衰落：</h2><p>（由多径效应或多普勒效应引起。当传输信道小尺度(距离或时间)变化时，无线电信号在传输过程中受周围阻碍物反射、绕射和散射，其幅度或相位快速变化。）</p>
+<p>依据多径效应产生的时延扩展，将小尺度衰落划分为频率选择性衰落（信道具有恒定增益且线性相位的带宽范围小于发送信号带宽）和频率非选择性&#x2F;平坦衰落（无线信道带宽大于发送信号的带宽，且在带宽范围内有恒定增益和线性相位）；</p>
+<p>依据多普勒效应产生的多普勒（频域）扩展，将小尺度衰落划分为快衰落（信道的相干时间比发送信号的周期短，且基带信号的带宽小于多普勒扩展）和慢衰落（信道上的相干时间远远大于发送信号的周期，且基带信号的带宽远远大于多普勒扩展）。</p>
+<h1 id="三、整体理解示意图"><a href="#三、整体理解示意图" class="headerlink" title="三、整体理解示意图"></a>三、整体理解示意图</h1><div align=center> 
+<img src = 'https://s3.bmp.ovh/imgs/2022/05/09/47ced27228ee73bf.png'></img>
+<div align=left>]]></content>
       <categories>
-        <category>云计算</category>
+        <category>移动通信基础</category>
       </categories>
       <tags>
-        <tag>云计算基础</tag>
+        <tag>移动通信基础</tag>
       </tags>
   </entry>
   <entry>
@@ -333,62 +389,6 @@
       </categories>
       <tags>
         <tag>通信与计算机网络基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>移动通信基础 - 无线信道衰落</title>
-    <url>/2022/04/26/%E7%A7%BB%E5%8A%A8%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80%20-%20%E6%97%A0%E7%BA%BF%E4%BF%A1%E9%81%93%E8%A1%B0%E8%90%BD/</url>
-    <content><![CDATA[<h1 id="一、无线电波传播效应"><a href="#一、无线电波传播效应" class="headerlink" title="一、无线电波传播效应"></a>一、无线电波传播效应</h1><p>无线通信信道是一种时变信道，无线电信号通过信道时会遭受来自不同途径的衰落，接收信号总功率表现为路径损失，阴影衰落，多径效应三种效应的综合。<br>（多径传播：电波遇到各种障碍物时会发生反射、绕射和散射现象，会对直射波形成干涉，也就是收发信机之间是有多条路径传播的。）</p>
-<p>1.路径损失：大范围内信号强度随距离变化（数百或数千个波长），应该是与距离的平方成正比，本质上表现为电波能量扩散现象。</p>
-<p>2.阴影衰落：中范围信号电平中值慢变（数百个波长），由于传播环境中的地形起伏、建筑物及其他障碍物对电波遮蔽所引起的慢衰落，信号中值出现缓慢变动，衰落深度与频率、阻碍物有关。</p>
-<p>3.多径效应（衰落）：小范围信号瞬时值快变（数十个波长），由于多径传播引起的快衰落，接收信号场强的瞬时值呈现快速变化。</p>
-<h1 id="二、无线信道衰落"><a href="#二、无线信道衰落" class="headerlink" title="二、无线信道衰落"></a>二、无线信道衰落</h1><p>根据无线电波传播效应，通常将无线信道衰落分为两类：大尺度衰落和小尺度（小尺度一般与信号波长为一个量级）衰落，尺度指时间或者距离的大小。</p>
-<h2 id="大尺度衰落："><a href="#大尺度衰落：" class="headerlink" title="大尺度衰落："></a>大尺度衰落：</h2><p>（包括传输损失、阴影衰落；大尺度衰落都是慢衰落，但是慢衰落不一定是大尺度衰落。）</p>
-<p>传输损失（路径损失）：无线电信号通过大尺度距离的信道传输时，随传输路径的增加，电波能量扩散，导致接收信号平均功率衰减，其衰减量与传输距离有关，距离越大，衰减量越多。</p>
-<p>阴影衰落：无线电信号在中尺度距离的信道中传输时，由于地形起伏或高大建筑物群等障碍物遮挡，在阻碍物的背后形成阴影区，导致接收信号平均功率随机变化。其衰落特性服从对数正态分布。</p>
-<h2 id="小尺度衰落："><a href="#小尺度衰落：" class="headerlink" title="小尺度衰落："></a>小尺度衰落：</h2><p>（由多径效应或多普勒效应引起。当传输信道小尺度(距离或时间)变化时，无线电信号在传输过程中受周围阻碍物反射、绕射和散射，其幅度或相位快速变化。）</p>
-<p>依据多径效应产生的时延扩展，将小尺度衰落划分为频率选择性衰落（信道具有恒定增益且线性相位的带宽范围小于发送信号带宽）和频率非选择性&#x2F;平坦衰落（无线信道带宽大于发送信号的带宽，且在带宽范围内有恒定增益和线性相位）；</p>
-<p>依据多普勒效应产生的多普勒（频域）扩展，将小尺度衰落划分为快衰落（信道的相干时间比发送信号的周期短，且基带信号的带宽小于多普勒扩展）和慢衰落（信道上的相干时间远远大于发送信号的周期，且基带信号的带宽远远大于多普勒扩展）。</p>
-<h1 id="三、整体理解示意图"><a href="#三、整体理解示意图" class="headerlink" title="三、整体理解示意图"></a>三、整体理解示意图</h1><div align=center> 
-<img src = 'https://s3.bmp.ovh/imgs/2022/05/09/47ced27228ee73bf.png'></img>
-<div align=left>]]></content>
-      <categories>
-        <category>移动通信基础</category>
-      </categories>
-      <tags>
-        <tag>移动通信基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>云计算基础 - VXLAN</title>
-    <url>/2022/06/12/%E4%BA%91%E8%AE%A1%E7%AE%97%E5%9F%BA%E7%A1%80%20-%20VXLAN/</url>
-    <content><![CDATA[<h3 id="VXLAN概述及产生原因"><a href="#VXLAN概述及产生原因" class="headerlink" title="VXLAN概述及产生原因"></a>VXLAN概述及产生原因</h3><p>1、虚拟机规模收到网络设备表现规格的限制</p>
-<p>服务器虚拟化导致虚拟机的数量呈现几何级增加，伴随而来的是虚拟机网卡MAC地址数量的剧增。原接入侧的二层设备的MAC地址表规格不能满足快速增长的虚拟机数量。</p>
-<p>VXLAN的解决方式：</p>
-<p>VXLAN将网络管理员规划的同一区域内的虚拟机发出的报文封装成新的UDP报文，并使用物理网络的IP和MAC地址作为外层头，这样报文对网络中的其他设备只表现为封装后的参数。</p>
-<p>2、网络的隔离能力有限</p>
-<p>对于现今公有云或者大型虚拟化计算服务器需要上万甚至更多租户的情况，现有的VLAN数量不足以满足这个需求</p>
-<p>VXLAN的解决方式：</p>
-<p>VXLAN引入了类似VLAN ID的用户标识，成为VXLAN网络标识VNI （VXLAN Network Idendifier）,由24bit组成，因此最多可支持16M的VXLAN段。</p>
-<p>3、虚拟机迁移范围受限</p>
-<p>传统的二层网络，不能满足已经成为常态的作业的虚拟机迁移，也不能满足保障迁移范围和业务的可用性不受限制等业务。</p>
-<p>VXLAN的解决方式:</p>
-<p>VXLAN将虚拟机发出的原始报文进行封装后通过VXLAN隧道进行传输，这个隧道可以跨越任意网络，因此对于处于同一网段的虚拟机而言，从逻辑上看，相当于处于同一个二层域。也就是说，VXLAN技术在三层网络上构建可一个虚拟的大二层网络，只要虚拟机路由可达，就可以将其规划到同一个大二层网络中。</p>
-<h3 id="VXLAN的原理"><a href="#VXLAN的原理" class="headerlink" title="VXLAN的原理"></a>VXLAN的原理</h3><p>VXLAN是一种网络虚拟化技术,通过将原主机发出的数据报文封装在UDP中，并使用物理网络的IP、MAC最为外层头并行封装,然后在IP网络上传输,到达目的地后由隧道终结点解封装并将数据发送到目标主机。<br>VXLAN的UDP端口号:4789</p>
-<h3 id="VXLAN报文封装格式"><a href="#VXLAN报文封装格式" class="headerlink" title="VXLAN报文封装格式"></a>VXLAN报文封装格式</h3><p>VXLAN的通信过程:</p>
-<p>1、发送方向接收方发送数据帧，帧中包含了发送方和接收方的虚拟MAC地址。</p>
-<p>2、发送方连接的VTEP节点收到了数据帧，进行封装并发送给目的VTEP节点。</p>
-<p>3、报文经过Underlay网络传输到目的的VTEP节点</p>
-<p>4、目的VTEP节点收到报文后，解封装得到内部数据帧，并将此数据帧交付给接收方。</p>
-<p>5、接收方收到数据帧，传输完成。</p>
-<h3 id="配置实例"><a href="#配置实例" class="headerlink" title="配置实例"></a>配置实例</h3><div align=center> 
-<img src = 'https://s3.bmp.ovh/imgs/2022/07/13/75ba1a3b4bb833a8.png'></img>
-<div align=left>]]></content>
-      <categories>
-        <category>云计算</category>
-      </categories>
-      <tags>
-        <tag>云计算基础</tag>
       </tags>
   </entry>
 </search>
